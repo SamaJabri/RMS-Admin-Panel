@@ -1,0 +1,797 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-repeat   : repeat;
+    background-position : center;
+    background-size     : 100vw 100vh;
+}
+
+.u-section-1 .u-sheet-1
+{
+    min-height : 880px;
+}
+
+.u-section-1 .u-text-1
+{
+    width              : 242px;
+    margin             : 15px 450px 0;
+    animation-duration : 2000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 7.75rem;
+    font-style         : italic;
+    text-shadow        : 2px 2px 6px rgba(100, 83, 53, 0.7);
+}
+
+.u-section-1 .u-list-1
+{
+    width              : 693px;
+    height             : auto;
+    min-height         : 696px;
+    margin             : 36px auto 60px 19px;
+    grid-template-rows : auto auto;
+    grid-auto-rows     : 100%;
+}
+
+.u-section-1 .u-repeater-1
+{
+    width                 : 78em;
+    max-height            : 50em;
+    margin-right          : auto;
+    margin-left           : -10rem;
+    grid-auto-columns     : calc(50% - 50px);
+    grid-template-columns : calc(30% - 30px) calc(30% - 30px) calc(30% - 30px);
+    grid-auto-rows        : calc(35% - 0px);
+    grid-gap              : 90px 200px;
+}
+
+.u-section-1 .u-list-item-1
+{
+    margin-bottom       : -1em;
+    transition-duration : 3s;
+    animation-duration  : 1500ms;
+    box-shadow          : 4px 4px 10px 2px rgba(100, 83, 53, 0.9);
+}
+
+.u-section-1 .u-image-1
+{
+    background-size : cover;
+    filter          : brightness(50%);
+}
+
+.u-section-1 .u-container-layout-1
+{
+    padding : 1.875em 0 -1.875em 1.875em;
+}
+
+.u-section-1 .u-group-1
+{
+    width           : 320px;
+    height          : 0;
+    margin-top      : 1em;
+    margin-left     : 0;
+    background-size : auto;
+}
+
+.u-section-1 .u-container-layout-2
+{
+    padding : 0 25px;
+}
+
+.u-section-1 .u-text-2
+{
+    margin             : 2em 0 0 5rem;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+    font-size          : 3em;
+    font-weight        : 700;
+    font-style         : italic;
+    text-decoration    : none solid rgb(17, 17, 17);
+}
+
+.u-section-1 .u-text-3,
+.u-section-1 .u-text-5
+{
+    visibility         : hidden;
+    margin             : 0.7em 2em 8rem 1em;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1.5em;
+    font-style         : italic;
+}
+
+.u-section-1 .u-text-4
+{
+    visibility         : hidden;
+    margin             : -6rem 2rem 0 1em;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1.5em;
+    font-weight        : normal;
+    background-image   : none;
+}
+
+.u-section-1 .u-btn-2
+{
+    visibility         : hidden;
+    margin             : 1em 0 0 5.5em;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1em;
+    font-weight        : 700;
+    font-style         : italic;
+    text-transform     : none;
+    border-style       : solid;
+    box-shadow         : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.u-section-1 .u-btn-2:hover,
+.u-section-1 .u-list-item-1:hover,
+.ConfirmButton:hover
+{
+    border-color : #C5A978;
+    box-shadow   : none;
+}
+
+.u-section-1 .u-list-item-1:hover .u-text-2
+{
+    display            : none;
+
+    animation-name     : fadeOutRight;
+    animation-duration : 2000ms;
+}
+
+.u-section-1 .u-list-item-1:hover .u-text-3,
+.u-section-1 .u-list-item-1:hover .u-text-4,
+.u-section-1 .u-list-item-1:hover .u-text-5,
+.u-section-1 .u-list-item-1:hover .u-btn-2
+{
+    visibility         : visible;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+}
+
+.Buttons
+{
+    display    : flex;
+    margin-top : 1em;
+}
+
+.fa-trash
+{
+    visibility   : hidden;
+    margin-top   : 1.3rem;
+    margin-right : 1em;
+    margin-left  : 1.7em;
+    font-size    : 2.2em;
+    color        : #645335;
+}
+
+.fa-trash:hover
+{
+    color : #C5A978;
+}
+
+/* Confirmation Popup Screen */
+
+.OfferConfirmation,
+.AddMeal,
+.ShowOrder
+{
+    position   : fixed;
+    z-index    : 10000;
+    top        : 0;
+    left       : 0;
+    display    : none;
+    overflow   : auto;
+    width      : 100%;
+    height     : 100%;
+    cursor     : pointer;
+    text-align : center;
+    background : rgba(100, 83, 53, 0.5);
+}
+
+.OfferConfirmation .helper,
+.AddMeal .helper,
+.ShowOrder .helper
+{
+    display        : inline-block;
+    height         : 100%;
+    vertical-align : middle;
+}
+
+.OfferConfirmation > div,
+.AddMeal > div,
+.ShowOrder > div
+{
+    position         : relative;
+    display          : inline-block;
+    width            : 60%;
+    height           : auto;
+    min-height       : 100px;
+    max-height       : 551px;
+    padding          : 15px 5%;
+    vertical-align   : middle;
+    border-radius    : 20px;
+    background-color : #D9C79E;
+    box-shadow       : 10px 10px 60px rgb(100, 83, 53);
+}
+
+.OfferConfirmation .CloseButton,
+.AddMeal .CloseButton,
+.ShowOrder .OCloseButton
+{
+    position         : absolute;
+    top              : -20px;
+    right            : -20px;
+    left             : -10px;
+    display          : inline-block;
+    width            : 30px;
+    height           : 30px;
+    cursor           : pointer;
+    font-family      : Arial, serif;
+    font-size        : 25px;
+    font-weight      : bold;
+    font-style       : italic;
+    line-height      : 30px;
+    text-align       : center;
+    color            : #2E2C25;
+    border-radius    : 50px;
+    background-color : #D9C79E;
+
+    box-shadow       : 4px 4px 14px 0 rgb(100, 83, 53);
+}
+
+.CloseButton:hover,
+.OCloseButton:hover
+{
+    background-color : rgb(100, 83, 53);
+}
+
+.trigger
+{
+    margin      : 20px;
+    cursor      : pointer;
+    font-size   : 20px;
+    font-weight : bold;
+}
+
+.ConfirmButton
+{
+    margin-bottom  : 0;
+    margin-left    : 22em;
+    font-style     : italic;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.ConfirmText
+{
+    font-family : 'Playfair Display', serif;
+    font-size   : 3rem;
+    font-style  : italic;
+    color       : #2E2C25;
+}
+
+.InfoForm
+{
+    display : none;
+}
+
+.u-section-1 .AddSectionImage
+{
+    width       : 279px;
+    height      : 188px;
+    margin-left : -15em;
+}
+
+/* Order info popup screen */
+
+.infoTable
+{
+    display         : inline-block;
+    overflow        : auto;
+    width           : 100%;
+    height          : 400px;
+    margin-top      : 20px;
+    border-collapse : collapse;
+}
+
+th
+{
+    padding-right : 2.5rem;
+}
+
+td
+{
+    height        : 50px;
+    padding-right : 30px;
+    padding-left  : 15px;
+}
+
+.tableHead
+{
+    position       : absolute;
+    height         : 30px;
+    margin-top     : -20px;
+    margin-right   : 2.5rem;
+    padding-right  : 70px;
+    padding-bottom : 10px;
+}
+
+tr:nth-child(even)
+{
+    background : #72683F;
+}
+
+.mealImage
+{
+    width         : 5.5rem;
+    height        : 4.5rem;
+    border-radius : 10px;
+}
+
+.bigMealImage
+{
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    display  : block;
+    width    : 0;
+    height   : 0;
+    border   : 0;
+}
+
+.mealImage:hover + .bigMealImage
+{
+    position      : absolute;
+    top           : 10rem;
+    left          : 18rem;
+    display       : block;
+    width         : 180px;
+    height        : 180px;
+    border-radius : 10px;
+}
+
+.showOrderButton
+{
+    margin-top    : -5rem;
+    margin-bottom : 8rem;
+    margin-left   : -3rem;
+    font-size     : 2rem;
+    box-shadow    : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.showOrderButton:hover
+{
+    box-shadow : none;
+}
+
+.totalDiv
+{
+    display        : flex;
+    flex-direction : row;
+    margin-top     : -8rem;
+    margin-left    : 55rem;
+    padding-bottom : 2rem;
+    font-size      : 2rem;
+}
+
+.ShowTotal
+{
+
+    width       : 70%;
+    height      : 3rem;
+    margin-top  : -0.7rem;
+    margin-left : 1rem;
+}
+
+/* Options in table CSS */
+
+.fa-edit,
+.fa-trash
+{
+    visibility : visible;
+    margin     : 0 0.4em 0 0.3em;
+    font-size  : 2rem;
+    color      : rgb(100, 83, 53);
+}
+
+.edit,
+.eraser
+{
+    color : #645335;
+}
+
+.fa-edit:hover, .fa-trash:hover
+{
+    color : #A78C57;
+}
+
+.edit:hover .update, .eraser:hover .delete
+{
+    visibility : visible;
+}
+
+.delete
+{
+    position    : absolute;
+    z-index     : 1;
+    top         : 2%;
+    left        : 87%;
+    visibility  : hidden;
+    margin-left : -60px;
+    font-family : 'Playfair Display', serif;
+    font-style  : italic;
+    color       : #2E2C25;
+}
+
+.update
+{
+    position    : absolute;
+    z-index     : 1;
+    top         : 2%;
+    left        : 92%;
+    visibility  : hidden;
+    margin-left : -60px;
+    font-family : 'Playfair Display', serif;
+    font-style  : italic;
+    color       : #2E2C25;
+}
+
+/* Add Order */
+
+.u-form-name
+{
+    margin-top : -3rem;
+    font-size  : 2.5rem;
+}
+
+.filterDiv label
+{
+    margin-top    : -1rem;
+    margin-bottom : 3rem;
+}
+
+.counter
+{
+    display        : flex;
+    flex-direction : row;
+    margin-top     : -5rem;
+    margin-bottom  : -2.3rem;
+    margin-left    : 10rem;
+    font-size      : 3rem;
+}
+
+.counter-minus,
+.counter-plus
+{
+    width         : 50px;
+    height        : 30px;
+    margin-top    : 20px;
+    margin-right  : 20px;
+    margin-left   : 20px;
+    color         : #72683F;
+    border        : none;
+    border-top    : 1px solid #72683F;
+    border-bottom : 1px solid #72683F;
+    background    : rgba(114, 104, 63, 0.3);
+}
+
+.counter-minus:hover,
+.counter-plus:hover
+{
+    background : rgba(141, 136, 100, 0.3);
+}
+
+.counter-display
+{
+    margin-top : 5rem;
+    color      : #72683F;
+}
+
+.formHeader
+{
+    font-family   : 'Playfair Display', Serif, serif;
+    color         : #72683F;
+    border-bottom : 1px solid #72683F;
+}
+
+.u-section-1 .SaveMealButton,
+.ConfirmOrderButton
+{
+    margin-top     : 0;
+    font-size      : 2em;
+    font-weight    : 700;
+    font-style     : italic;
+    letter-spacing : normal;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 5px 5px 16px 0px rgb(100, 83, 53);
+}
+
+.ConfirmOrderButton
+{
+    margin-top    : 1rem;
+    margin-bottom : 5rem;
+    font-size     : 2rem;
+}
+
+.u-section-1 .SaveMealButton:hover,
+.ConfirmOrderButton:hover
+{
+    box-shadow : none;
+}
+
+/* Header */
+
+#userIcon
+{
+    width              : 3.8125em;
+    height             : 3.8125em;
+    margin             : -2.75em -1.9375em 2.625em 80em;
+    cursor             : pointer;
+    animation-name     : slideInDown;
+    animation-duration : 2000ms;
+    box-shadow         : 0px 0 13px 3px rgba(100, 83, 53, 0.5);
+    will-change        : transform;
+
+}
+
+#userIcon:hover
+{
+    cursor     : pointer;
+    border     : none;
+    box-shadow : none;
+}
+
+.xxx
+{
+    position            : fixed;
+    z-index             : 1;
+    top                 : 9rem;
+    right               : 12.5rem;
+    display             : none;
+    min-width           : 10em;
+    animation-name      : fadeIn;
+    animation-duration  : 1s;
+    animation-direction : alternate;
+    color               : #2E2C25;
+    border-radius       : 10px;
+    background-color    : rgba(197, 169, 120, 0.8);
+    box-shadow          : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.xxx::after
+{
+    position     : absolute;
+    bottom       : 95%;
+    left         : 63%;
+    margin-left  : -5px;
+    content      : '';
+    border-width : 10px;
+    border-style : solid;
+    border-color : rgb(197, 169, 120) transparent transparent transparent;
+}
+
+#userIcon:hover .xxx
+{
+    display : block;
+}
+
+.xxx li
+{
+    display         : block;
+    padding         : 0.75em 1em;
+    text-decoration : none;
+    color           : #2E2C25;
+}
+
+.xxx li:hover
+{
+    border-radius    : 10px;
+    background-color : #F1F1F1;
+}
+
+.dropdown
+{
+    position : relative;
+    display  : inline-block;
+}
+
+.dropdown:hover .xxx
+{
+    display : block;
+}
+
+.dropdown:hover #userIcon
+{
+    background-color : #3E8E41;
+}
+
+.header .search-container
+{
+    float : right;
+}
+
+.search
+{
+    margin-top  : -4.125em;
+    margin-left : 60em;
+}
+
+.header input[type=text]
+{
+    margin-top : 0.5em;
+    padding    : 0.375em;
+    font-size  : 1.0625em;
+    border     : none;
+}
+
+.header .search-container button
+{
+    float        : right;
+    margin-top   : 0.5em;
+    margin-right : 0;
+    padding      : 0.375em 0.625em;
+    cursor       : pointer;
+    font-size    : 1.0625em;
+    border       : none;
+    background   : #DDDDDD;
+}
+
+.header .search-container button:hover
+{
+    background : #CCCCCC;
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        grid-template-columns : repeat(2, calc(50% - 50px));
+        grid-gap              : 100px 120px;
+    }
+
+    .u-section-1 .u-group-1
+    {
+        height : auto;
+    }
+    .u-section-1 .u-text-1
+    {
+        margin-left : 4.7em;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 2.625em 69em;
+    }
+    .search
+    {
+        margin-left : 50em;
+    }
+    .u-section-1 .u-btn-2
+    {
+        margin-left : 12em;
+    }
+}
+
+@media (max-width : 991px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        margin-left           : -7rem;
+        grid-auto-columns     : calc(50% - 50px) calc(50% - 50px);
+        grid-template-columns : 40% 40%;
+        grid-auto-rows        : calc(33.33% - 6.66666666666667px);
+    }
+
+    .u-section-1 .u-text-1
+    {
+        margin-left : 4.3em;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 1em 65em;
+    }
+    .search
+    {
+        margin-left : 36em;
+    }
+    .u-section-1 .u-btn-2
+    {
+        margin-left : 10em;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-list-1
+    {
+        width       : 540px;
+        margin-left : 0;
+    }
+
+    .u-section-1 .u-repeater-1
+    {
+        margin-left       : -4rem;
+        grid-auto-columns : 50% 50%;
+        grid-auto-rows    : calc(34.66% - 3.33333333333333px);
+    }
+
+    .u-section-1 .u-container-layout-1
+    {
+        padding-left : 10px;
+    }
+
+    .u-section-1 .u-container-layout-2
+    {
+        padding-right : 10px;
+        padding-left  : 10px;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 2.625em 63em;
+    }
+    .search
+    {
+        margin-left : 23em;
+    }
+}
+
+@media (max-width : 575px)
+{
+    .u-section-1 .u-text-1
+    {
+        margin-left : 8rem;
+        font-size   : 4.25rem;
+    }
+
+    .u-section-1 .u-list-1
+    {
+        width : 340px;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 0 23em;
+    }
+    .xxx
+    {
+        margin-right : 33rem;
+    }
+    .search-container
+    {
+        margin-left : -15em;
+    }
+    .u-section-1 .u-group-1
+    {
+        width  : 33rem;
+        height : 30rem;
+    }
+    .u-section-1 .u-text-2
+    {
+        margin-top : 1.7em;
+        font-size  : 4.5rem;
+    }
+    .u-section-1 .u-btn-2
+    {
+        margin-left : 7em;
+    }
+
+    .u-section-1 .u-repeater-1
+    {
+        width                 : 80rem;
+        margin-left           : 3rem;
+        grid-auto-columns     : calc(50% - 50px);
+        grid-template-columns : 40%;
+        grid-auto-rows        : calc(33.33% - 6.66666666666667px);
+    }
+    .menu-collapse .u-nav-link svg
+    {
+        margin-left : 3rem;
+    }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+  <head>
+
+      <title>Manager Sign up Form</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <meta name="keywords" content="SJ Restaurant, Manager Login Form​">
+
+      <!-- CSS Links -->
+      <link rel="stylesheet" href="nicepage.css" media="screen">
+      <link rel="stylesheet" href="Login Form.css" media="screen">
+
+      <!-- JS Links -->
+      <script class="u-script" type="text/javascript" src="jquery.js"></script>
+      <script class="u-script" type="text/javascript" src="nicepage.js"></script>
+
+      <!-- Chosen Library. -->
+      <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+      <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
+  </head>
+
+  <body class="u-body u-overlap u-overlap-transparent">
+
+  <section class="u-align-center u-clearfix u-image u-section-1" id="sec-084e" data-image-width="626"
+           data-image-height="417">
+
+      <div class="u-clearfix u-sheet u-sheet-1">
+
+          <h1 class="u-custom-font u-font-playfair-display u-text u-text-custom-color-8 u-text-1">Sign up Form </h1>
+
+          <div class="u-form u-form-1">
+
+              <form action="#" method="POST" class="u-clearfix u-form-spacing-12 u-inner-form"
+                    source="custom" name="form">
+
+                  <!-- Image input : Class name = "u-input-2". -->
+                  <img id = "addImage" src="images/default-image.jpg" alt="Section Description Image"
+                       class="u-image u-image-round u-preserve-proportions u-radius-10 AddSectionImage"
+                       data-image-width="150" data-image-height="101">
+
+                  <input onchange="loadFile(event)" type="file" id="addImg" name="img" accept="image/*"
+                       class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input
+                       u-input-rectangle imageInput" >
+
+                  <!-- First Name input : Class name = "u-input-1". -->
+                  <div class="u-form-email u-form-group">
+
+                      <label for="email-3b9a" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        First Name
+                      </label>
+
+                      <input type="text" name="email" class="u-border-2 u-border-custom-color-8 u-border-no-left
+                      u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                      u-input-rectangle u-text-custom-color-8 u-input-1" required>
+
+                  </div>
+
+                  <!-- Last Name input : Class name = "u-input-1". -->
+                  <div class="u-form-email u-form-group">
+
+                      <label for="email-3b9a" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        Last Name
+                      </label>
+
+                      <input type="text" name="email" class="u-border-2 u-border-custom-color-8 u-border-no-left
+                      u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                      u-input-rectangle u-text-custom-color-8 u-input-1" required>
+
+                  </div>
+
+                  <!-- Email input : Class name = "u-input-1". -->
+                  <div class="u-form-email u-form-group">
+
+                      <label for="email-3b9a" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        Email
+                      </label>
+
+                      <input type="email" id="email-3b9a" name="email" class="u-border-2 u-border-custom-color-8
+                      u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                      u-input-rectangle u-text-custom-color-8 u-input-1" required>
+
+                  </div>
+
+                  <!-- Number input : Class name = "u-input-1". -->
+                  <div class="u-form-email u-form-group">
+
+                      <label for="email-3b9a" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        Number
+                      </label>
+
+                      <input type="text" name="email" class="u-border-2 u-border-custom-color-8 u-border-no-left
+                       u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                       u-input-rectangle u-text-custom-color-8 u-input-1">
+
+                  </div>
+
+                  <!-- Birthday input : Class name = "u-input-1". -->
+                  <div class="u-form-email u-form-group">
+
+                      <label for="email-3b9a" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        Birthday
+                      </label>
+
+                      <input type="date" name="email" class="u-border-2 u-border-custom-color-8 u-border-no-left
+                      u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                      u-input-rectangle u-text-custom-color-8 u-input-1">
+
+                  </div>
+
+                  <!-- Gender input : Class name = "u-input-1". -->
+                  <div class="u-form-email u-form-group">
+
+                      <!-- Select Gender : id name = "GenderSelect" . -->
+                      <div class="itemDiv">
+
+                          <label for="GenderSelect" class="u-custom-font u-font-playfair-display u-label
+                                        u-text-custom-color-8">Choose Gender</label>
+
+                          <select id="GenderSelect" data-placeholder="Choose Gender.." multiple
+                                  class="chosen-select" name="Filter Type">
+
+                              <option value="female">Female</option>
+                              <option value="male">Male</option>
+                              <option value="other">Other</option>
+
+                          </select>
+
+                      </div>
+
+                  </div>
+
+                  <!-- Password input : Class name = "u-input-2". -->
+                  <div class="u-form-group u-form-group-2">
+
+                      <label for="text-f54e" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        Password
+                      </label>
+
+                      <input type="password" id="text-f54e" name="password" class="u-border-2 u-border-custom-color-8
+                      u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                      u-input-rectangle u-text-custom-color-8 u-input-2" required>
+
+                  </div>
+
+                  <!-- Password Re-enter input : Class name = "u-input-2". -->
+                  <div class="u-form-group u-form-group-2">
+
+                      <label for="text-f54e" class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                        Re-enter Password
+                      </label>
+
+                      <input type="password" name="password" class="u-border-2 u-border-custom-color-8
+                          u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-playfair-display u-input
+                          u-input-rectangle u-text-custom-color-8 u-input-2" oninput="check(this)" required>
+
+                  </div>
+
+                  <!-- Checkbox : id name = "checkbox-207a". -->
+                  <div class="u-form-checkbox u-form-group u-form-group-3">
+
+                      <input type="checkbox" id="checkbox-207a" name="checkbox" value="On">
+
+                      <label for="checkbox-207a" class="u-custom-font u-font-playfair-display u-label
+                       u-text-custom-color-8">Remember me?</label>
+
+                  </div>
+
+                  <!-- Sign up button : Class name = "u-btn-1". -->
+                  <div class="u-align-center u-form-group u-form-submit">
+
+                      <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round u-btn-submit u-button-style
+                       u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none u-radius-4
+                       u-text-custom-color-8 u-text-hover-white u-btn-1">Sign up</a>
+
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+
+                  </div>
+
+                  <!-- Messages after pressing button -->
+                  <div class="u-form-send-message u-form-send-success"> Process completed successfully.</div>
+                  <div class="u-form-send-error u-form-send-message"> Unable to login. Please fix errors then try again.
+                  </div>
+
+                  <input type="hidden" name="recaptchaResponse">
+
+              </form>
+          </div>
+      </div>
+
+  </section>
+
+  <script>
+
+      /* Adding an image */
+
+      let loadFile = function(event) {
+          let image = document.getElementById('addImage');
+          image.src = URL.createObjectURL(event.target.files[0]);
+      };
+
+      /* Select in add form js */
+
+      $('.chosen-select').chosen({
+        no_results_text: 'Oops, nothing found!'
+      });
+
+      $('.chosen-container').css(
+              {
+                'width': '30.5rem',
+                'background-color': 'beige',
+                'margin-top': '8px',
+                'margin-bottom': '15px',
+                'font-family': 'Playfair Display'
+              });
+
+
+      /* Check if Passwords are the same */
+
+      function check(input)
+      {
+          if (input.value !== document.getElementById('text-f54e').value)
+          {
+              input.setCustomValidity('Password Does Not Match.');
+          }
+          else
+          {
+             input.setCustomValidity('');
+          }
+      }
+
+  </script>
+
+  </body>
+
+</html>

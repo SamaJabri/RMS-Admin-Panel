@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px;">
+    <head>
+
+        <title>Employee Management</title>
+
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "utf-8">
+        <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+        <!-- CSS Links -->
+        <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+        <link rel = "stylesheet" href = "Employee-Management.css" media = "screen">
+        <link rel = "stylesheet" href = "HeaderStyling.css" media = "screen"/>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- JS Links -->
+        <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+        <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+
+
+        <!-- Awesome Library Link. -->
+        <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+
+    </head>
+
+    <body data-home-page="Employee-Management.html" data-home-page-title="Employee Management" class="u-body">
+
+    <header>
+
+        <div>
+            <h2>
+                <span class = "dashes" onclick = "openNav()">&#9776;</span>
+
+                <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+            </h2>
+
+            <!-- Sidebar. -->
+            <nav id = "sidebaar">
+
+                <div class = "sideBar" id = "sideBar">
+
+                    <a href = "javascript:void(0)" class = "closeButton" onclick = "closeNav()">&times;</a>
+
+                    <div class = "logo">SJ Restaurant</div>
+
+                    <ul>
+                        <li><a style = "height: 3rem;" href = "Home.html">Home</a></li>
+
+                        <li>
+                            <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#menu">
+                                Menu Management</a>
+
+                            <div id = "menuDiv" class = "menu">
+                                <ul id = "menu" class = "collapse list-unstyled">
+                                    <li><a href = "Menu-Sections.html">&rarr;  Show Sections</a></li>
+                                    <li><a href = "Menu-Management.html">&rarr;  Show Menu</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a  style = "height: 3rem;" class = "employeeMan" href = "Employee-Management.html">
+                                Employee Management</a>
+                        </li>
+
+                        <li>
+                            <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#customer">
+                                Customer Management</a>
+
+                            <div id = "customerDiv" class = "menu">
+                                <ul id = "customer" class = "collapse list-unstyled">
+                                    <li><a href = "Customer-Management.html">&rarr;  Show Customer Info</a></li>
+                                    <li><a href = "Reservation-Management.html">&rarr;  Show Reservations</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a style = "height: 3rem;" class = "offerMan" href = "Order-Management.html">
+                                Order Management</a>
+                        </li>
+
+                        <li>
+                            <a style = "height: 3rem;" class = "offerMan" href = "Offer%20Management.html">
+                                Offer Management</a>
+                        </li>
+
+                        <li>
+                            <a style = "height: 3rem;" class = "areaMan" href = "Area-Management.html">
+                                Area Management</a>
+                        </li>
+
+                        <li>
+                            <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#stock">
+                                Stock Management</a>
+
+                            <div id = "stockDiv" class = "menu">
+                                <ul id = "stock" class = "collapse list-unstyled">
+                                    <li><a href = "Stock-Management.html">&rarr;  Show Stocks</a></li>
+                                    <li><a href = "Supplier-Management.html">&rarr;  Show Suppliers</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <p style = "width:100%; margin-left: -1rem; margin-top: 6rem; border-top: 2px solid white"></p>
+                            <a class = "stockMan" href = "Information-Page.html">
+                                Restaurant Information</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+            <!-- Searchbar. -->
+            <div class="search-box">
+                <button class="btn-search">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <input type="text" class="input-search" placeholder="Type to Search...">
+            </div>
+
+            <!-- User icon. -->
+            <div class = "userIcon">
+
+                <!-- <img src = "images/sadEmployeeIcon.jpg" alt = "User icon" class = "icon"> -->
+
+                <div class = "userList">
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Popup Screen For Delete : Class name = "deleteConfirm". -->
+    <div id="deleteConfirm" class="deleteConfirm">
+
+        <span class="helper"></span>
+        <div>
+
+            <!-- Close Button : Class name = "CloseButton". -->
+            <div onclick="closeDeleteConfirmWindow()" class="deleteConfirm DCloseButton">&times;</div>
+
+            <p class="ConfirmText"> Are you sure you want to delete this item?</p>
+
+            <!-- Delete Button : Class name = "deleteButton". -->
+            <button class="u-border-1 u-border-custom-color-8 u-btn u-btn-round u-button-style
+                                 u-custom-color-8 u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                 u-text-body-alt-color u-text-hover-custom-color-8 deleteButton">Delete
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Popup Screen For Add : Class name = "AddEmployee". -->
+    <div id ="AddEmployee" class = "AddEmployee">
+
+        <span class = "helper"></span>
+        <div>
+
+            <!-- Close Button : Class name = "CloseButton". -->
+            <div onclick = "closeAddWindow()" class = "AddEmployee ACloseButton">&times;</div>
+
+            <!-- Add section : Class name = "u-inner-form". -->
+            <div class="u-form u-form-1">
+                <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form"
+                      style="padding: 10px" source="custom" name="form">
+
+                    <!-- Image input : Class name = "u-input-2". -->
+                    <img id = "addImage" src="images/default-image.jpg" alt="Section Description Image"
+                         class="u-image u-preserve-proportions AddSectionImage"
+                         data-image-width="150" data-image-height="101">
+
+                    <input onchange="document.getElementById('addImage').src = window.URL.createObjectURL(this.files[0])"
+                           type="file" id="addImg" name="img" accept="image/*" class="u-border-2 u-border-black
+                                       u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle
+                                        u-input-2" >
+
+                    <!-- Select Job Type : id name = "mySelect" . -->
+                    <div class="filterDiv">
+                        <label for="mySelect" class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Job Type: </label>
+                        <select id="mySelect" data-placeholder="Choose job type..">
+                            <option value="" selected disabled hidden>Choose job type..</option>
+                            <option value="Type">Cashier</option>
+                            <option value="Date">Garcon</option>
+                            <option value="Area">Chef</option>
+                            <option value="Customer">Stock</option>
+                        </select>
+                    </div>
+
+                    <!-- Stock Name input : Class name = "u-input-1". -->
+                    <label style = "margin-left: -83.5rem; margin-top: 2rem;"
+                            class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Stock Name:
+                    </label>
+
+                    <input style = "word-wrap: break-word;" type="text" name="description" class="u-border-2
+                                u-border-custom-color-8 u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                StockName">
+
+                    <div class="u-form-group u-form-name">
+
+                        <!-- First name input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">First Name:
+                        </label>
+
+                        <input type="text" id="addName" name="name" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+                        <!-- Last name input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Last Name:
+                        </label>
+
+                        <input type="text" name="price" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Phone Number input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Phone Number:
+                        </label>
+
+                        <input type="tel" name="name" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Email input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Email:
+                        </label>
+
+                        <input type="email" name="bonus" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Salary input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Salary:
+                        </label>
+
+                        <input type="number" name="bonus" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Password input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Password
+                        </label>
+
+                        <input type="text" name="bonus" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                    </div>
+
+                    <!-- Save Button : Class name = "u-btn-1". -->
+                    <div class="u-align-center u-form-group u-form-submit">
+                        <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round u-btn-submit
+                                    u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none
+                                    u-radius-5 u-text-custom-color-8 u-text-hover-white SaveMealButton">Add
+                        </a>
+
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+
+                    <!-- Messages after pressing button -->
+                    <div class="u-form-send-message u-form-send-success">
+                        Thank you! Your section has been Added. </div>
+                    <div class="u-form-send-error u-form-send-message">
+                        Unable to add section. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Popup Screen For Edit : Class name = "EditEmployee". -->
+    <div id ="EditEmployee" class = "EditEmployee">
+
+        <span class = "helper"></span>
+        <div>
+
+            <!-- Close Button : Class name = "CloseButton". -->
+            <div onclick = "closeEditWindow()" class = "EditEmployee ACloseButton">&times;</div>
+
+            <!-- Add section : Class name = "u-inner-form". -->
+            <div class="u-form u-form-1">
+                <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form"
+                      style="padding: 10px" source="custom" name="form">
+
+                    <!-- Image input : Class name = "u-input-2". -->
+                    <img id = "editImage" src="images/default-image.jpg" alt="Employee Profile Picture"
+                         class="u-image u-preserve-proportions AddSectionImage"
+                         data-image-width="150" data-image-height="101">
+
+                    <input onchange="document.getElementById('editImage').src = window.URL.createObjectURL(this.files[0])"
+                           type="file" id="editImg" name="img" accept="image/*" class="u-border-2 u-border-black
+                                       u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle
+                                        u-input-2" >
+
+                    <!-- Select Job Type : id name = "mySelect" . -->
+                    <div class="filterDiv">
+                        <label for="mySelect" class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Job Type: </label>
+                        <select id="mySelect" data-placeholder="Choose job type..">
+                            <option value="" selected disabled hidden>Choose job type..</option>
+                            <option value="Type">Cashier</option>
+                            <option value="Date">Garcon</option>
+                            <option value="Area">Chef</option>
+                            <option value="Customer">Stock</option>
+                        </select>
+                    </div>
+
+                    <!-- Stock Name input : Class name = "u-input-1". -->
+                    <label style = "margin-left: -83.5rem; margin-top: 2rem;"
+                           class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Stock Name:
+                    </label>
+
+                    <input style = "word-wrap: break-word;" type="text" name="description" class="u-border-2
+                                u-border-custom-color-8 u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                StockName">
+
+                    <div class="u-form-group u-form-name">
+
+                        <!-- First name input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">First Name:
+                        </label>
+
+                        <input type="text" id="addName" name="name" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+                        <!-- Last name input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Last Name:
+                        </label>
+
+                        <input type="text" name="price" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Phone Number input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Phone Number:
+                        </label>
+
+                        <input type="tel" name="name" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Email input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Email:
+                        </label>
+
+                        <input type="email" name="bonus" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Salary input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Salary:
+                        </label>
+
+                        <input type="number" name="bonus" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                        <!-- Password input : Class name = "AddSectionName". -->
+                        <label class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Password
+                        </label>
+
+                        <input type="text" name="bonus" class="u-border-2 u-border-custom-color-8
+                                    u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                                    u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8
+                                    AddSectionName">
+
+
+                    </div>
+
+                    <!-- Save Button : Class name = "u-btn-1". -->
+                    <div class="u-align-center u-form-group u-form-submit">
+                        <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round u-btn-submit
+                                    u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none
+                                    u-radius-5 u-text-custom-color-8 u-text-hover-white SaveMealButton">Save
+                        </a>
+
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+
+                    <!-- Messages after pressing button -->
+                    <div class="u-form-send-message u-form-send-success">
+                        Thank you! Your section has been Added. </div>
+                    <div class="u-form-send-error u-form-send-message">
+                        Unable to add section. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section class="u-clearfix u-gradient u-section-1" id="carousel_71c3">
+
+            <div class="u-clearfix u-sheet u-sheet-1">
+
+                <h2 class="u-custom-font u-font-playfair-display u-text u-text-custom-color-8 u-text-1">Employee Management</h2>
+
+                <!-- Add Employee button : Class name = "u-btn-1". -->
+                <a onclick="openAddWindow()" href="#" data-page-id="884108653" class="u-border-2 u-border-custom-color-8
+                u-btn u-btn-round u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8
+                u-none u-radius-5 u-text-custom-color-8 u-text-hover-white u-btn-1">
+                    <i class = "fa fa-user"></i>
+                    Add Employee
+                </a>
+
+                <div class="u-table u-table-responsive u-table-1">
+                    <table class="u-table-entity">
+
+                        <!-- Defining columns widths. -->
+                        <colgroup>
+                            <col width="7.2%">
+                            <col width="10%">
+                            <col width="12.1%">
+                            <col width="11.1%">
+                            <col width="15.5%">
+                            <col width="24.3%">
+                            <col width="10.799999999999994%">
+                            <col width="13.099999999999994%">
+                        </colgroup>
+
+                        <!-- Table Head. -->
+                        <thead class="u-align-center u-custom-color-8 u-custom-font u-font-playfair-display u-table-header u-table-header-1">
+                            <tr style="height: 50px;">
+                                <th class="u-table-cell">ID</th>
+                                <th class="u-table-cell">First Name</th>
+                                <th class="u-table-cell">Last Name</th>
+                                <th class="u-table-cell">Job Type</th>
+                                <th class="u-table-cell">Number</th>
+                                <th class="u-table-cell">Email</th>
+                                <th class="u-table-cell">Salary</th>
+                                <th class="u-table-cell">Options</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Table Body. -->
+                        <tbody class="u-custom-font u-font-playfair-display u-table-body u-text-custom-color-8">
+                            <tr style="height: 71px;">
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    01
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    Mike
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    Monet
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    Cashier
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    +90 (538) 334 56 76
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    Mike.Monet@outlook.com
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+                                    $1000
+                                </td>
+                                <td class="u-border-2 u-border-custom-color-8 u-border-no-left u-border-no-right u-table-cell">
+
+                                    <!-- Delete Button : Class name = "fa-eraser". -->
+                                    <a class = "eraser" href = "#" >
+                                        <i onclick = "openDeleteConfirmWindow()" class = "fas fa-trash"></i>
+                                        <p class = "delete">Delete</p>
+                                    </a>
+
+
+                                    <!-- Edit Button : Class name = "fa-edit". -->
+                                    <a class = "edit" href = "#">
+                                        <i onclick = "openEditWindow()" class = "far fa-edit"></i>
+                                        <p class = "update">Edit</p>
+                                    </a>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    <script>
+
+        let addEmployee = document.getElementById('AddEmployee');
+        let editEmployee = document.getElementById('EditEmployee');
+
+        let deleteConfirm = document.getElementById('deleteConfirm');
+        let deleteButton = document.getElementsByClassName('fa-trash');
+        let deleteCloseButton = document.getElementsByClassName('DCloseButton');
+
+        function openDeleteConfirmWindow()
+        {
+            for (let i = 0; i < deleteButton.length; i++)
+            {
+                deleteConfirm.style.display = 'block';
+            }
+        }
+
+        function closeDeleteConfirmWindow()
+        {
+            for (let i = 0; i < deleteCloseButton.length; i++)
+            {
+                deleteConfirm.style.display = 'none';
+            }
+        }
+
+        function openAddWindow()
+        {
+            addEmployee.style.display = 'block';
+        }
+
+        function closeAddWindow()
+        {
+            addEmployee.style.display = 'none';
+        }
+
+        function openEditWindow()
+        {
+            editEmployee.style.display = 'block';
+        }
+
+        function closeEditWindow()
+        {
+            editEmployee.style.display = 'none';
+        }
+
+        window.onclick = function (event)
+        {
+            if (event.target === deleteConfirm)
+            {
+                deleteConfirm.style.display = 'none';
+            }
+            else if (event.target === addEmployee)
+            {
+                addEmployee.style.display = 'none';
+            }
+            else if (event.target === editEmployee)
+            {
+                editEmployee.style.display = 'none';
+            }
+        };
+
+
+    </script>
+
+    <script class = "u-script" type = "text/javascript" src = "NavigationBar.js"></script>
+
+    </body>
+</html>

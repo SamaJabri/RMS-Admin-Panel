@@ -1,0 +1,241 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-repeat   : repeat;
+    background-position : center;
+    background-size     : 100vw 100vh;
+}
+.u-inner-form
+{
+    padding             : 1.5rem 2.5rem;
+    border-radius       : 10px;
+    background-image    : url('images/beigeSea.jpg');
+    background-repeat   : no-repeat;
+    background-position : center;
+    background-size     : cover;
+    box-shadow          : 2px 2px 4px 2px #72683F;
+}
+
+.login input
+{
+    margin-bottom : 1rem;
+}
+
+.u-section-1 .u-sheet-1
+{
+    min-height    : 507px;
+    margin-top    : -4rem;
+    margin-bottom : 3rem;
+}
+
+.u-section-1 .u-text-1
+{
+    width       : 550px;
+    margin      : 200px auto 40px;
+    font-weight : 700;
+}
+
+.u-section-1 .u-form-1
+{
+    width  : 570px;
+    height : 305px;
+    margin : 26px auto 11px;
+}
+
+.u-section-1 .u-input-1
+{
+    text-transform : uppercase;
+}
+
+.u-section-1 .u-form-group-2
+{
+    margin-left : 0;
+}
+
+.u-section-1 .u-input-2
+{
+    text-transform : uppercase;
+}
+
+.u-section-1 .u-form-group-3
+{
+    margin-left : 0;
+}
+
+.u-section-1 .u-btn-1
+{
+    font-weight  : 700;
+    border-style : solid;
+}
+
+.signupSentence,
+.signupLink
+{
+    font-family : 'Playfair Display', serif;
+    font-size   : 1.2rem;
+    font-style  : italic;
+    color       : #2E2C25;
+}
+
+.signupLink:hover
+{
+    cursor : pointer;
+    color  : #72683F;
+}
+
+/* Sign up Form Page */
+
+.AddSectionImage
+{
+    width       : 15rem;
+    height      : 10rem;
+    margin-left : 8em;
+}
+
+.u-section-1 .imageInput
+{
+    margin-bottom : 1em;
+    margin-left   : 8em;
+    font-size     : 1rem;
+    border-bottom : none;
+}
+
+select
+{
+    width         : 35rem;
+    padding       : 6px;
+    font-family   : 'Playfair Display', Serif, serif;
+    color         : #72683F;
+    border        : 1px solid #DDDDDD;
+    border-radius : 8px;
+}
+
+form input
+{
+    margin-bottom : 0.5rem;
+}
+
+/* Welcome Page */
+
+.u-section-1 .welcomeSheet
+{
+    display             : flex;
+    flex-direction      : column;
+    margin-top          : 4rem;
+    padding-bottom      : 4rem;
+    border-radius       : 8px;
+    background-image    : url('images/beigeSea.jpg');
+    background-repeat   : repeat;
+    background-position : center;
+    background-size     : 100vw 100vh;
+    box-shadow          : 2px 2px 16px 2px #72683F;
+}
+
+.u-section-1 .welcomeText
+{
+    width              : 40rem;
+    margin-top         : 6rem;
+    margin-left        : 17rem;
+    animation-name     : slideInDown;
+    animation-duration : 1s;
+    font-size          : 3.2rem;
+    font-style         : italic;
+    letter-spacing     : 2px;
+}
+
+.u-section-1 .welcomeParagraph
+{
+    margin-top  : 2rem;
+    margin-left : 19rem;
+    font-size   : 1.5rem;
+}
+
+.mainDiv
+{
+    display        : flex;
+    flex-direction : row;
+    margin-top     : 3rem;
+    margin-left    : 23rem;
+}
+
+.mainDiv button
+{
+    margin-left   : 9rem;
+    padding       : 0.6rem 1.8rem;
+    font-family   : 'Playfair Display', serif;
+    font-size     : 1.1rem;
+    font-weight   : 700;
+    font-style    : italic;
+    color         : #645335;
+    border        : 2px solid #645335;
+    border-radius : 5px;
+    background    : none;
+}
+
+.mainDiv button:hover
+{
+    cursor           : pointer;
+    transform        : scale(1.1);
+    color            : white;
+    background-color : #645335;
+    box-shadow       : none;
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-sheet-1
+    {
+        min-height : 418px;
+    }
+
+    .u-section-1 .u-btn-1
+    {
+        letter-spacing : normal;
+        text-transform : none;
+    }
+}
+
+@media (max-width : 991px)
+{
+    .u-section-1 .u-sheet-1
+    {
+        min-height : 320px;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-sheet-1
+    {
+        min-height : 240px;
+    }
+
+    .u-section-1 .u-text-1
+    {
+        width : 540px;
+    }
+
+    .u-section-1 .u-form-1
+    {
+        width : 540px;
+    }
+}
+
+@media (max-width : 575px)
+{
+    .u-section-1 .u-sheet-1
+    {
+        min-height : 151px;
+    }
+
+    .u-section-1 .u-text-1
+    {
+        width : 340px;
+    }
+
+    .u-section-1 .u-form-1
+    {
+        width : 340px;
+    }
+}

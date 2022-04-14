@@ -1,0 +1,667 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-position : center;
+    background-size     : 100%;
+}
+
+.u-section-1 .u-sheet-1
+{
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    justify-content : center;
+    min-height      : 880px;
+}
+
+.u-section-1 .BelowHeader
+{
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    margin-top      : 5rem;
+}
+
+.u-section-1 .Gallery
+{
+    width              : 24rem;
+    margin             : 1rem 45rem 6rem;
+    margin-right       : 40rem;
+    animation-duration : 2000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 5.75rem;
+    font-style         : italic;
+    text-shadow        : 2px 2px 6px rgba(100, 83, 53, 0.7);
+}
+
+.u-section-1 .u-list-1
+{
+    width              : 693px;
+    height             : auto;
+    min-height         : 696px;
+    margin             : 36px auto 60px 19px;
+    grid-template-rows : auto auto;
+    grid-auto-rows     : 100%;
+}
+
+.u-section-1 .u-repeater-1
+{
+    width                 : 78em;
+    max-height            : 50em;
+    margin-top            : -7em;
+    margin-right          : auto;
+    margin-left           : -12rem;
+    grid-auto-columns     : calc(50% - 50px);
+    grid-template-columns : calc(30% - 30px) calc(30% - 30px) calc(30% - 30px) calc(30% - 30px);
+    grid-auto-rows        : calc(35% - 0px);
+    grid-gap              : 90px 50px;
+}
+
+.u-section-1 .u-list-item-1
+{
+    margin-bottom       : -1em;
+    transition-duration : 3s;
+    animation-duration  : 1500ms;
+    box-shadow          : 4px 4px 10px 2px rgba(100, 83, 53, 0.9);
+
+}
+
+.u-section-1 .u-image-1
+{
+    background-size : cover;
+    filter          : brightness(50%);
+}
+
+.u-section-1 .u-container-layout-1
+{
+    padding : 1.875em 0 -1.875em 1.875em;
+}
+
+.u-section-1 .u-group-1
+{
+    width           : 320px;
+    height          : 0;
+    margin-top      : 1em;
+    margin-left     : 0;
+    background-size : auto;
+}
+
+.u-section-1 .u-container-layout-2
+{
+    padding : 0 25px;
+}
+
+.u-section-1 .u-btn-1
+{
+    visibility         : hidden;
+    margin             : 5em 3em 0 1.5em;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1em;
+    font-weight        : 700;
+    font-style         : italic;
+    text-transform     : none;
+    border-style       : solid;
+    box-shadow         : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.u-section-1 .u-btn-1:hover,
+.u-section-1 .u-list-item-1:hover,
+.ConfirmButton:hover,
+.deleteButton:hover
+{
+    border-color : #C5A978;
+    box-shadow   : none;
+}
+
+.u-section-1 .u-list-item-1:hover .u-text-2,
+.u-section-1 .u-list-item-1:hover .u-btn-1,
+.u-section-1 .u-list-item-1:hover .fa-trash
+{
+    visibility         : visible;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+}
+
+.Buttons
+{
+    display    : flex;
+    margin-top : 1em;
+}
+
+.fa-trash
+{
+    visibility   : hidden;
+    margin-top   : 7.2rem;
+    margin-right : 1em;
+    margin-left  : 1.3em;
+    font-size    : 2.2em;
+    color        : #645335;
+}
+
+.fa-trash:hover
+{
+    color : #C5A978;
+}
+
+/* Confirmation Popup Screen */
+
+.deleteConfirm,
+.EditSection
+{
+    position   : fixed;
+    z-index    : 10000;
+    top        : 0;
+    left       : 0;
+    display    : none;
+    overflow   : auto;
+    width      : 100%;
+    height     : 100%;
+    cursor     : pointer;
+    text-align : center;
+    background : rgba(100, 83, 53, 0.5);
+}
+
+.EditSection .helper,
+.deleteConfirm .helper
+{
+    display        : inline-block;
+    height         : 100%;
+    vertical-align : middle;
+}
+
+.EditSection > div,
+.deleteConfirm > div
+{
+    position         : relative;
+    display          : inline-block;
+    width            : 60%;
+    height           : auto;
+    min-height       : 100px;
+    max-height       : 551px;
+    padding          : 15px 5%;
+    vertical-align   : middle;
+    border-radius    : 20px;
+    background-color : #D9C79E;
+    box-shadow       : 10px 10px 60px rgb(100, 83, 53);
+}
+
+.EditSection .CloseButton,
+.deleteConfirm .DCloseButton
+{
+    position         : absolute;
+    top              : -20px;
+    right            : -20px;
+    left             : -10px;
+    display          : inline-block;
+    width            : 30px;
+    height           : 30px;
+    cursor           : pointer;
+    font-family      : Arial, serif;
+    font-size        : 25px;
+    font-weight      : bold;
+    font-style       : italic;
+    line-height      : 30px;
+    text-align       : center;
+    color            : #2E2C25;
+    border-radius    : 50px;
+    background-color : #D9C79E;
+
+    box-shadow       : 4px 4px 14px 0 rgb(100, 83, 53);
+}
+
+.CloseButton:hover,
+.DCloseButton:hover
+{
+    background-color : rgb(100, 83, 53);
+}
+
+.trigger
+{
+    margin      : 20px;
+    cursor      : pointer;
+    font-size   : 20px;
+    font-weight : bold;
+}
+
+.ConfirmButton,
+.deleteButton
+{
+    margin-bottom  : 0;
+    margin-left    : 16em;
+    font-size      : 2rem;
+    font-style     : italic;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.ConfirmText
+{
+    font-family : 'Playfair Display', serif;
+    font-size   : 3rem;
+    font-style  : italic;
+    color       : #2E2C25;
+}
+
+/* Inner form */
+
+.u-section-1 .u-form-1,
+.u-section-1 .u-form-2
+{
+    height      : 168px;
+    margin-top  : -20em;
+    margin-left : 12em;
+    font-size   : 2rem;
+}
+
+.u-section-1 .u-input-2
+{
+    margin-left    : 3em;
+    font-size      : 0.7em;
+    text-transform : none;
+    color          : rgb(100, 83, 53);
+    border         : none;
+}
+
+.u-section-1 .saveButton
+{
+    height         : 4rem;
+    margin-top     : 2em;
+    margin-left    : -11em;
+    font-size      : 1em;
+    font-weight    : 700;
+    font-style     : italic;
+    letter-spacing : normal;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.u-section-1 .saveButton:hover
+{
+    box-shadow : none;
+}
+
+.u-section-1 .AddedImage
+{
+    width  : 30rem;
+    height : 20rem;
+}
+
+/* Add Button */
+
+.u-section-1 .AddButton,
+.u-section-1 .AddButtonSmall
+{
+    padding      : 6px 43px 6px 41px;
+    font-size    : 2.25rem;
+    font-weight  : 700;
+    /* margin: -5.5em -3rem 3em auto;*/
+    border-style : solid;
+    box-shadow   : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .AddButton:hover,
+.u-section-1 .AddButtonSmall:hover
+{
+    box-shadow : none;
+}
+
+.u-section-1 .AddButton:hover .fa-plus,
+.u-section-1 .AddButtonSmall:hover .fa-plus
+{
+    color : white;
+}
+
+.fa-plus
+{
+    margin-right : 5px;
+    font-size    : 20px;
+    color        : #645335;
+}
+
+.AddButtonSmall
+{
+    visibility : hidden;
+}
+
+/* Header */
+
+#userIcon
+{
+    width              : 3.8125em;
+    height             : 3.8125em;
+    margin             : -2.75em -1.9375em 2.625em 80em;
+    cursor             : pointer;
+    animation-name     : slideInDown;
+    animation-duration : 2000ms;
+    box-shadow         : 0px 0 13px 3px rgba(100, 83, 53, 0.5);
+    will-change        : transform;
+
+}
+
+#userIcon:hover
+{
+    cursor     : pointer;
+    border     : none;
+    box-shadow : none;
+}
+
+.xxx
+{
+    position            : fixed;
+    z-index             : 1;
+    top                 : 9rem;
+    right               : 12.5rem;
+    display             : none;
+    min-width           : 10em;
+    animation-name      : fadeIn;
+    animation-duration  : 1s;
+    animation-direction : alternate;
+    color               : #2E2C25;
+    border-radius       : 10px;
+    background-color    : rgba(197, 169, 120, 0.8);
+    box-shadow          : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.xxx::after
+{
+    position     : absolute;
+    bottom       : 95%;
+    left         : 63%;
+    margin-left  : -5px;
+    content      : '';
+    border-width : 10px;
+    border-style : solid;
+    border-color : rgb(197, 169, 120) transparent transparent transparent;
+}
+
+#userIcon:hover .xxx
+{
+    display : block;
+}
+
+.xxx li
+{
+    display         : block;
+    padding         : 0.75em 1em;
+    text-decoration : none;
+    color           : #2E2C25;
+}
+
+.xxx li:hover
+{
+    border-radius    : 10px;
+    background-color : #F1F1F1;
+}
+
+.dropdown
+{
+    position : relative;
+    display  : inline-block;
+}
+
+.dropdown:hover .xxx
+{
+    display : block;
+}
+
+.dropdown:hover #userIcon
+{
+    background-color : #3E8E41;
+}
+
+.header .search-container
+{
+    float : right;
+}
+
+.search
+{
+    margin-top  : -4.125em;
+    margin-left : 60em;
+}
+
+.header input[type=text]
+{
+    margin-top : 0.5em;
+    padding    : 0.375em;
+    font-size  : 1.0625em;
+    border     : none;
+}
+
+.header .search-container button
+{
+    float        : right;
+    margin-top   : 0.5em;
+    margin-right : 0;
+    padding      : 0.375em 0.625em;
+    cursor       : pointer;
+    font-size    : 1.0625em;
+    border       : none;
+    background   : #DDDDDD;
+}
+
+.header .search-container button:hover
+{
+    background : #CCCCCC;
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        margin-left           : -3em;
+        grid-template-columns : repeat(3, calc(30% - 30px));
+        grid-gap              : 100px 100px;
+    }
+
+    .u-section-1 .u-group-1
+    {
+        height : auto;
+    }
+    .u-section-1 .Gallery
+    {
+        margin-left : 4.7em;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 2.625em 70em;
+    }
+    .search
+    {
+        margin-left : 50em;
+    }
+
+    .u-section-1 .u-btn-2
+    {
+        margin-left : 12em;
+    }
+
+    .u-section-1 .AddButton
+    {
+        margin-left : 37em;
+    }
+
+    /* Inner Form */
+    .u-section-1 .u-inner-form
+    {
+        margin-left : -5.5em;
+    }
+    .u-section-1 .saveButton
+    {
+        margin-left : -2em;
+    }
+}
+
+@media (max-width : 991px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        margin-left           : 1rem;
+        grid-auto-columns     : calc(50% - 50px) calc(50% - 50px);
+        grid-template-columns : 25% 25% 25%;
+        grid-auto-rows        : calc(33.33% - 6.66666666666667px);
+    }
+
+    .u-section-1 .Gallery
+    {
+        margin-left : 5.3em;
+    }
+
+    #userIcon
+    {
+        margin-top  : -2.75em;
+        margin-left : 73em;
+    }
+
+    .search
+    {
+        margin-left : 37em;
+    }
+
+    .u-section-1 .u-btn-2
+    {
+        margin-left : 10em;
+    }
+
+    .u-section-1 .AddButton
+    {
+        margin-left : 37em;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-list-1
+    {
+        width       : 540px;
+        margin-left : 0;
+    }
+
+    .u-section-1 .u-repeater-1
+    {
+        margin-left       : -4rem;
+        grid-auto-columns : 50% 50%;
+        grid-auto-rows    : calc(34.66% - 3.33333333333333px);
+    }
+
+    .u-section-1 .u-container-layout-1
+    {
+        padding-left : 10px;
+    }
+
+    .u-section-1 .u-container-layout-2
+    {
+        padding-right : 10px;
+        padding-left  : 10px;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 2.625em 63em;
+    }
+    .search
+    {
+        margin-left : 23em;
+    }
+}
+
+@media (max-width : 575px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        margin-top : 0;
+    }
+    .u-section-1 .Gallery
+    {
+        margin-bottom : 0;
+        margin-left   : 8rem;
+        font-size     : 4.25rem;
+    }
+
+    .u-section-1 .u-list-1
+    {
+        width : 340px;
+    }
+
+    #userIcon
+    {
+        margin : -2.75em -1.9375em 0 20em;
+    }
+    .xxx
+    {
+        margin-right : 35rem;
+    }
+    .search-container
+    {
+        margin-left : -15em;
+    }
+
+    /* Add Button */
+    .u-section-1 .AddButton
+    {
+        visibility : hidden;
+    }
+    .u-section-1 .AddButtonSmall
+    {
+        visibility    : visible;
+        margin-top    : -1.5em;
+        margin-left   : 1em;
+        padding-right : 0.7em;
+        padding-left  : 0.9em;
+    }
+
+    .u-section-1 .u-group-1
+    {
+        width  : 33rem;
+        height : 30rem;
+    }
+    .u-section-1 .u-text-2
+    {
+        margin-top : 1.7em;
+        font-size  : 4.5rem;
+    }
+    .u-section-1 .u-btn-2
+    {
+        margin-left : 7em;
+    }
+
+    .Buttons
+    {
+        margin-left : 1.7em;
+    }
+
+    .u-section-1 .u-repeater-1
+    {
+        width                 : 80rem;
+        margin-left           : 1.8rem;
+        grid-auto-columns     : calc(50% - 50px);
+        grid-template-columns : 40%;
+        grid-auto-rows        : calc(33.33% - 6.66666666666667px);
+    }
+    .menu-collapse .u-nav-link svg
+    {
+        margin-left : 3rem;
+    }
+
+    /* Popup Window */
+    .Info > div,
+    .deleteConfirm > div
+    {
+        width       : 40%;
+        min-height  : 100px;
+        max-height  : 550px;
+        margin-top  : -30em;
+        margin-left : -34em;
+    }
+    .u-section-1 .u-inner-form
+    {
+        width       : 15em;
+        margin-left : -13.3em;
+    }
+}
+

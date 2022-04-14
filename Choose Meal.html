@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+  <head>
+      <title>Menu Management</title>
+
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+      <meta charset = "utf-8">
+      <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+      <!-- CSS Links -->
+      <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+      <link rel = "stylesheet" href = "Choose%20Meal.css" media = "screen">
+      <link rel = "stylesheet" href = "HeaderStyling.css" media = "screen">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <!-- JS Links -->
+      <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+      <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+      <script class = "u-script" type = "text/javascript" src = "NavigationBar.js"></script>
+
+      <!-- Awesome Library Link. -->
+      <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      />
+
+  </head>
+
+  <body class="u-body">
+
+  <header>
+
+      <div>
+          <h2>
+              <span class = "dashes" onclick = "openNav()">&#9776;</span>
+
+              <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+          </h2>
+
+          <!-- Sidebar. -->
+          <nav id = "sidebaar">
+
+              <div class = "sideBar" id = "sideBar">
+
+                  <a href = "javascript:void(0)" class = "closeButton" onclick = "closeNav()">&times;</a>
+
+                  <div class = "logo">SJ Restaurant</div>
+
+                  <ul>
+                      <li><a style = "height: 3rem;" href = "Home.html">Home</a></li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#menu">
+                              Menu Management</a>
+
+                          <div id = "menuDiv" class = "menu">
+                              <ul id = "menu" class = "collapse list-unstyled">
+                                  <li><a href = "Menu-Sections.html">&rarr;  Show Sections</a></li>
+                                  <li><a href = "Menu-Management.html">&rarr;  Show Menu</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a  style = "height: 3rem;" class = "employeeMan" href = "Employee-Management.html">
+                              Employee Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#customer">
+                              Customer Management</a>
+
+                          <div id = "customerDiv" class = "menu">
+                              <ul id = "customer" class = "collapse list-unstyled">
+                                  <li><a href = "Customer-Management.html">&rarr;  Show Customer Info</a></li>
+                                  <li><a href = "Reservation-Management.html">&rarr;  Show Reservations</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Order-Management.html">
+                              Order Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Offer%20Management.html">
+                              Offer Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "areaMan" href = "Area-Management.html">
+                              Area Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#stock">
+                              Stock Management</a>
+
+                          <div id = "stockDiv" class = "menu">
+                              <ul id = "stock" class = "collapse list-unstyled">
+                                  <li><a href = "Stock-Management.html">&rarr;  Show Stocks</a></li>
+                                  <li><a href = "Supplier-Management.html">&rarr;  Show Suppliers</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <p style = "width:100%; margin-left: -1rem; margin-top: 6rem; border-top: 2px solid white"></p>
+                          <a class = "stockMan" href = "Information-Page.html">
+                              Restaurant Information</a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+          </nav>
+
+          <!-- Searchbar. -->
+          <div class="search-box">
+              <button class="btn-search">
+                  <i class="fas fa-search"></i>
+              </button>
+
+              <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+
+          <!-- User icon. -->
+          <div class = "userIcon">
+
+              <!-- <img src = "images/sadEmployeeIcon.jpg" alt = "User icon" class = "icon"> -->
+
+              <div class = "userList">
+
+
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </header>
+
+
+  <!-- Start Of Section : Class name  = "u-section-1". -->
+      <div class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_510a">
+          <div class="u-clearfix u-sheet u-sheet-1">
+
+              <!-- Popup Screen For Confirmation : Class name = "OfferConfirmation". -->
+              <div id = "OfferConfirmation" class = "OfferConfirmation">
+
+                  <span class = "helper"></span>
+                  <div>
+
+                      <!-- Close Button : Class name = "CloseButton". -->
+                      <div class = "OfferConfirmation CloseButton">&times;</div>
+
+                      <p class = "ConfirmText"> Are you sure you want to add this item?</p>
+
+                      <!-- Info Form. -->
+                      <form action = "" method = "POST">
+                          <input class = "InfoForm" name = "offerID" type = "text" placeholder = "Offer ID">
+                          <input class = "InfoForm" name = "mealID" type = "text" placeholder = "Meal ID">
+                          <input class = "InfoForm" name = "mealPrice" type = "text" placeholder = "Meal Price">
+
+                          <!-- Confirm Button : Class name = "ConfirmButton". -->
+                          <button class = "u-border-1 u-border-custom-color-8 u-btn u-btn-round u-button-style
+                             u-custom-color-8 u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                             u-text-body-alt-color u-text-hover-custom-color-8 ConfirmButton">Confirm
+                          </button>
+                      </form>
+
+                  </div>
+              </div>
+
+              <!-- Menu Header : Class name = "u-text-1". -->
+              <h1 class="u-custom-font u-text u-text-custom-color-8 u-text-1"
+                  data-animation-name="slideIn" data-animation-duration="2000" data-animation-delay="0"
+                  data-animation-direction="Down">Menu
+              </h1>
+
+              <!-- Menu Div : Class name = "u-list-1". -->
+              <div class="u-layout-grid u-list u-list-1">
+                  <div class="u-align-center u-repeater u-repeater-1">
+
+                      <!-- Menu item (Meal Box) : Class name = "u-list-item-1". -->
+                      <div class="u-align-center u-container-style u-effect-hover-zoom u-list-item u-radius-50
+                           u-repeater-item u-shading u-shape-round u-list-item-1" data-image-width="2000"
+                           data-image-height="1333" data-animation-name="flipIn" data-animation-duration="1500"
+                           data-animation-delay="0" data-animation-direction="X">
+
+                          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+
+                              <div class="u-background-effect u-expanded">
+
+                                  <!-- Meal Image : Class name = "u-image-1". -->
+                                  <img src = "images/default-image.jpg" class="u-background-effect-image u-expanded
+                                  u-image u-shading u-image-1" data-image-width="800" data-image-height="631"
+                                  alt = "Meal Image">
+
+                              </div>
+
+                              <div class="u-align-left u-container-style u-group u-video-cover u-group-1">
+                                  <div class="u-container-layout u-container-layout-2">
+
+                                      <!-- Meal Name : Class name = "u-text-2". -->
+                                      <h3 class="u-align-left u-custom-font u-font-playfair-display u-text
+                                      u-text-white u-text-2">Original
+                                      </h3>
+
+                                      <!-- Meal Info : Class name = "u-text-3". -->
+                                      <p class="u-text u-text-white u-text-3">Tomato sauce, mozzarella &amp; oregano</p>
+
+                                      <!-- Meal Price : Class name = "u-text-4". -->
+                                      <h6 class="u-text u-text-palette-3-light-2 u-text-4">$18.00</h6>
+
+                                      <!-- Num of times ordered : Class name = "u-text-5". -->
+                                      <h6 class = "u-text u-text-white u-text-5" style = "margin-bottom: 0;">Ordered : </h6>
+
+                                      <div class = "Buttons">
+
+                                          <!-- Add Button : Class name = "u-btn-1". -->
+                                          <a onclick="openConfirmWindow()" href="#" data-page-id="450608696" class="u-border-1
+                                          u-border-custom-color-8 u-btn u-btn-round u-button-style u-custom-color-8
+                                          u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                          u-text-body-alt-color u-text-hover-custom-color-8 u-btn-2">Add
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+      <script>
+          let confirmationBox = document.getElementById("OfferConfirmation");
+
+          let btn = document.getElementsByClassName("u-btn-2");
+
+          let span = document.getElementsByClassName("CloseButton")[0];
+
+          function openConfirmWindow()
+          {
+              for(let i = 0; i < btn.length; i++)
+              {
+                  confirmationBox.style.display = "block";
+              }
+          }
+
+          span.onclick = function()
+          {
+              confirmationBox.style.display = "none";
+          }
+
+          window.onclick = function(event)
+          {
+              if (event.target === confirmationBox)
+              {
+                  confirmationBox.style.display = "none";
+              }
+          }
+      </script>
+
+  </body>
+</html>

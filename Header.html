@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Menu Management</title>
+
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "utf-8">
+        <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+        <!-- CSS Links -->
+        <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+        <link rel = "stylesheet" href = "Header.css" media = "screen">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- JS Links -->
+        <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+        <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+
+        <!-- Awesome Library Link. -->
+        <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class = "headerDiv">
+
+                <!-- Restaurant name and dashes for sidebar. -->
+                <h2>
+
+                    <span id = "dashes" class = "dashes" onclick = "openNav()">&#9776;</span>
+
+                    <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+
+                </h2>
+
+                <!-- Sidebar. -->
+                <nav id = "sidebaar">
+
+                    <div class = "sideBar" id = "sideBar">
+
+                        <span href = "javascript:void(0)" class = "closeButton" id = "closeButton"
+                           onclick = "closeNav()">&times;</span>
+
+                        <div class = "logo">SJ Restaurant</div>
+
+                        <ul>
+
+                            <!-- Home. -->
+                            <li>
+                                <a style = "height: 3rem;" href = "Home.html">Home</a>
+                            </li>
+
+                            <!-- Menu Management. -->
+                            <li>
+
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false"
+                                   class="dropdown-toggle" href = "#menu">
+                                    Menu Management
+                                </a>
+
+                                <div id = "menuDiv" class = "menu">
+                                    <ul id = "menu" class = "collapse list-unstyled">
+
+                                        <li><a href = "#">&rarr;  Show Sections</a></li>
+                                        <li><a href = "#">&rarr;  Menu</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+
+                            <!-- Employee Management. -->
+                            <li>
+
+                                <a  style = "height: 3rem;" data-toggle="collapse" aria-expanded="false"
+                                    class = "employeeMan" href = "#employee">
+                                    Employee Management
+                                </a>
+
+                                <div class = "employee">
+                                    <ul id = "employee" class="collapse list-unstyled">
+
+                                        <li><a href = "#">&rarr;  Show Employees</a></li>
+                                        <li><a href = "#">&rarr;  Add Employee</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+
+                            <!-- Customer Management. -->
+                            <li>
+
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false"
+                                   class = "customerMan" href = "#customer">Customer Management</a>
+
+                                <div id = "customerDiv" class = "menu">
+                                    <ul id = "customer" class = "collapse list-unstyled">
+
+                                        <li><a href = "#">&rarr;  Show Customers</a></li>
+                                        <li><a href = "#">&rarr;  Show Reservations</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+
+                            <!-- Offer Management. -->
+                            <li>
+
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false"
+                                   class = "offerMan" href = "#offer">
+                                    Offer Management
+                                </a>
+
+                                <div class = "offer">
+                                    <ul id = "offer" class="collapse list-unstyled">
+
+                                        <li><a href = "#">&rarr;  Show Offers</a></li>
+                                        <li><a href = "#">&rarr;  Add Offer</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+
+                            <!-- Area Management. -->
+                            <li>
+
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false"
+                                   class = "areaMan" href = "#area">
+                                    Area Management
+                                </a>
+
+                                <div class = "stock">
+                                    <ul id = "area" class="collapse list-unstyled">
+
+                                        <li><a href = "#">&rarr;  Show Areas</a></li>
+                                        <li><a href = "#">&rarr;  Show Buildings</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </li>
+
+                            <!-- Stock Management. -->
+                            <li>
+
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false"
+                                   class = "stockMan" href = "#stock">
+                                    Stock Management
+                                </a>
+
+                                <div class = "stock">
+                                    <ul id = "stock" class="collapse list-unstyled">
+
+                                        <li><a href = "#">&rarr;  Stock Status</a></li>
+                                        <li><a href = "#">&rarr;  Show Suppliers</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+
+
+                        <!-- General Settings. -->
+                        <p style = "border-top: 1px solid white; width: 30rem; margin-left:2.5rem; margin-top: 6rem;">
+
+                            <a style = "padding-bottom: 3rem;" class = "headerButton" href = "#">
+                                &rarr; Set Info</a>
+
+                            <a style = "padding-bottom: 3rem;" class = "headerButton" href = "#">
+                                &rarr; Settings</a>
+
+                            <a class = "headerButton" href = "#">
+                                &rarr; Log out</a>
+
+                        </p>
+
+
+                    </div>
+
+                </nav>
+
+                <!-- Searchbar. -->
+                <div id="wrap">
+
+                    <form action="" autocomplete="on">
+
+                        <input id="search" name="search" type="text" placeholder="Search..">
+                        <i class = "fas fa-search"></i>
+
+                    </form>
+
+                </div>
+
+                <!-- User Icon. -->
+                <div class = "dropdown">
+
+                    <!-- User image. -->
+                    <img id = "userIcon" data-image-width="298" data-image-height="169"
+                         src="images/default-image.jpg" class="img-circle" alt="blabla" width="80" height="80">
+
+                    <!-- User info. -->
+                    <ul class = "xxx">
+
+                        <!-- Username -->
+                        <li style="border-bottom: 2px solid #333129; font-size: 2.2rem;width:16rem;">User Name</li>
+
+                        <!-- Restaurant Section -->
+                        <li>Section</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </header>
+
+        <script>
+
+            /* Show Shadow on opening sidebar */
+
+            let closeButton = document.getElementById("closeButton");
+
+            let dashes = document.getElementById("dashes");
+            let sidebar = document.getElementById("sideBar");
+
+            dashes.addEventListener("click",
+                function()
+                {
+                    sidebar.style.boxShadow = "0 0 0 10000px rgba(100, 83, 53, .50)";
+                }
+            );
+
+            closeButton.addEventListener("click",
+                function()
+                {
+                    sidebar.style.boxShadow = "none";
+
+                }
+            );
+
+            /* Open and close sidebar on click */
+
+            function openNav()
+            {
+                document.getElementById("sideBar").style.width = "35rem";
+
+                document.getElementById("sideBar").style.visibility = "visible";
+
+            }
+
+            function closeNav()
+            {
+                document.getElementById("sideBar").style.width = "0";
+
+                document.body.style.backgroundColor = "beige";
+            }
+
+            function onFocusOut()
+            {
+                document.getElementById("menuDiv").style.display = "none";
+            }
+
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+
+        </script>
+
+    </body>
+
+</html>
+
+<!-- Old Header Styling -->
+
+<!--  <header  class="page-header" id = "sec-b2a7">-->
+<!--          <div class = "u-clearfix u-sheet u-sheet-1">-->
+
+<!--              &lt;!&ndash; Right Side: Name of restaurant &ndash;&gt;-->
+<!--              <h2 class = "u-custom-font u-font-playfair-display u-subtitle u-text u-text-custom-color-8 u-text-2">-->
+
+<!--                  <a class = "u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none-->
+<!--                            u-none u-text-custom-color-8 u-btn-1" href="Home.html" data-page-id="48454774">SJ Restaurant-->
+<!--                  </a>-->
+
+<!--              </h2>-->
+
+<!--              <nav data-position="" class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">-->
+<!--                  <div class="menu-collapse">-->
+<!--                      <a class="u-button-style u-nav-link u-text-custom-color-8" href="#" style="">-->
+<!--                          <svg>-->
+<!--                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>-->
+<!--                          </svg>-->
+<!--                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                               xmlns:xlink="http://www.w3.org/1999/xlink">-->
+<!--                              <defs>-->
+<!--                                  <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">-->
+<!--                                      <rect y="1" width="16" height="2"></rect>-->
+<!--                                      <rect y="7" width="16" height="2"></rect>-->
+<!--                                      <rect y="13" width="16" height="2"></rect>-->
+<!--                                  </symbol>-->
+<!--                              </defs>-->
+<!--                          </svg>-->
+<!--                      </a>-->
+<!--                  </div>-->
+<!--                  <div class="u-custom-menu u-nav-container">-->
+<!--                      <ul class="u-nav u-unstyled">-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link" href="#">Home</a>-->
+<!--                          </li>-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link" href="#">Menu Management</a>-->
+<!--                              <div class="u-nav-popup">-->
+<!--                                  <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">SectionsList</a>-->
+<!--                                      </li>-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Add Section</a>-->
+<!--                                      </li>-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Menu</a>-->
+<!--                                          <div class="u-nav-popup">-->
+<!--                                              <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3">-->
+<!--                                                  <li class="u-nav-item">-->
+<!--                                                      <a class="u-button-style u-nav-link u-white">AddMeal</a>-->
+<!--                                                  </li>-->
+<!--                                              </ul>-->
+<!--                                          </div>-->
+<!--                                      </li>-->
+<!--                                  </ul>-->
+<!--                              </div>-->
+<!--                          </li>-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link" href="#">Employee Management</a>-->
+<!--                              <div class="u-nav-popup">-->
+<!--                                  <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">EmployeesList</a>-->
+<!--                                      </li>-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">AddEmployee</a>-->
+<!--                                      </li>-->
+<!--                                  </ul>-->
+<!--                              </div>-->
+<!--                          </li>-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link" href="#">Customer Management</a>-->
+<!--                          </li>-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link" href="#">Offer Management</a>-->
+<!--                              <div class="u-nav-popup">-->
+<!--                                  <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Offers List</a>-->
+<!--                                      </li>-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Add Offer</a>-->
+<!--                                      </li>-->
+<!--                                  </ul>-->
+<!--                              </div>-->
+<!--                          </li>-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link">Area Management</a>-->
+<!--                              <div class="u-nav-popup">-->
+<!--                                  <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6">-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Areas List</a>-->
+<!--                                      </li>-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Add Area</a>-->
+<!--                                      </li>-->
+<!--                                  </ul>-->
+<!--                              </div>-->
+<!--                          </li>-->
+<!--                          <li class="u-nav-item">-->
+<!--                              <a class="u-button-style u-nav-link">Stock Management</a>-->
+<!--                              <div class="u-nav-popup">-->
+<!--                                  <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-7">-->
+<!--                                      <li class="u-nav-item">-->
+<!--                                          <a class="u-button-style u-nav-link u-white">Stocks List</a>-->
+<!--                                      </li>-->
+<!--                                  </ul>-->
+<!--                              </div>-->
+<!--                          </li>-->
+<!--                      </ul>-->
+<!--                  </div>-->
+<!--                  <div class="u-custom-menu u-nav-container-collapse">-->
+<!--                      <div class="u-container-style u-custom-color-8 u-inner-container-layout u-sidenav u-sidenav-1"-->
+<!--                           data-offcanvas-width="315">-->
+<!--                          <div class="u-sidenav-overflow">-->
+<!--                              <div class="u-menu-close"></div>-->
+<!--                              <ul class="u-align-center u-custom-font u-font-playfair-display u-nav u-popupmenu-items-->
+<!--                                     u-spacing-23 u-text-active-custom-color-9 u-text-hover-custom-color-9 u-unstyled u-nav-8">-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link" href="#">Home</a>-->
+<!--                                  </li>-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link" href="#">Menu Management</a>-->
+<!--                                      <div class="u-nav-popup">-->
+<!--                                          <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-9">-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Sections List</a>-->
+<!--                                              </li>-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Add Section</a>-->
+<!--                                              </li>-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Menu</a>-->
+<!--                                                  <div class="u-nav-popup">-->
+<!--                                                      <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-10">-->
+<!--                                                          <li class="u-nav-item">-->
+<!--                                                              <a class="u-button-style u-nav-link">Add Meal</a>-->
+<!--                                                          </li>-->
+<!--                                                      </ul>-->
+<!--                                                  </div>-->
+<!--                                              </li>-->
+<!--                                          </ul>-->
+<!--                                      </div>-->
+<!--                                  </li>-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link" href="#">Employee Management</a>-->
+<!--                                      <div class="u-nav-popup">-->
+<!--                                          <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-11">-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Employees List</a>-->
+<!--                                              </li>-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Add Employee</a>-->
+<!--                                              </li>-->
+<!--                                          </ul>-->
+<!--                                      </div>-->
+<!--                                  </li>-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link" href="#">Customer Management</a>-->
+<!--                                  </li>-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link" href="#">Offer Management</a>-->
+<!--                                      <div class="u-nav-popup">-->
+<!--                                          <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12">-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Offers List</a>-->
+<!--                                              </li>-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Add Offer</a>-->
+<!--                                              </li>-->
+<!--                                          </ul>-->
+<!--                                      </div>-->
+<!--                                  </li>-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link">Area Management</a>-->
+<!--                                      <div class="u-nav-popup">-->
+<!--                                          <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-13">-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Areas List</a>-->
+<!--                                              </li>-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Add Area</a>-->
+<!--                                              </li>-->
+<!--                                          </ul>-->
+<!--                                      </div>-->
+<!--                                  </li>-->
+<!--                                  <li class="u-nav-item">-->
+<!--                                      <a class="u-button-style u-nav-link">Stock Management</a>-->
+<!--                                      <div class="u-nav-popup">-->
+<!--                                          <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-14">-->
+<!--                                              <li class="u-nav-item">-->
+<!--                                                  <a class="u-button-style u-nav-link">Stocks List</a>-->
+<!--                                              </li>-->
+<!--                                          </ul>-->
+<!--                                      </div>-->
+<!--                                  </li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="u-custom-color-8 u-menu-overlay u-opacity u-opacity-80"></div>-->
+<!--                  </div>-->
+<!--              </nav>-->
+
+<!--              <div class="search-container">-->
+<!--                  <form action="" class = "search">-->
+<!--                      <input type="text" placeholder="Search.." name="search">-->
+<!--                      <button type="submit">-->
+<!--                          <i class="fa fa-search"></i>-->
+<!--                      </button>-->
+<!--                  </form>-->
+<!--              </div>-->
+
+<!--              <div class = "dropdown">-->
+<!--                  <img id = "userIcon" data-image-width="298" data-image-height="169"-->
+<!--                       src="images/default-image.jpg" class="img-circle" alt="blabla" width="80" height="80">-->
+<!--                  <ul class = "xxx">-->
+<!--                      &lt;!&ndash; Username &ndash;&gt;-->
+<!--                      <li>Sama Jabri</li>-->
+<!--                      &lt;!&ndash; Restaurant Section &ndash;&gt;-->
+<!--                      <li>Mazzeh Section</li>-->
+<!--                      &lt;!&ndash; Settings &ndash;&gt;-->
+<!--                      <li>Settings</li>-->
+<!--                      &lt;!&ndash; Logout &ndash;&gt;-->
+<!--                      <li>Log Out</li>-->
+<!--                  </ul>-->
+<!--              </div>-->
+
+
+<!--          </div>-->
+<!--      </header>-->

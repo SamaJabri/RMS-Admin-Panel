@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px;">
+
+    <head>
+
+        <title>Information Page</title>
+
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "utf-8">
+        <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+        <!-- CSS Links -->
+        <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+        <link rel = "stylesheet" href = "Information-Page.css" media = "screen">
+
+        <!-- JS Links -->
+        <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+        <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+
+        <!-- Chosen Library. -->
+        <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+        <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
+        <!-- Awesome Library Link. -->
+        <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+
+    </head>
+
+    <body>
+
+        <h1 class = "infoHeader">Restaurant Info</h1>
+
+        <form>
+
+
+            <div class="itemDiv" style="margin-top: 2rem;">
+
+                <!-- Select Ingredients : id name = "ItemSelect" . -->
+                <label for="ItemSelect" class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Work Days</label>
+
+                <select id="ItemSelect" data-placeholder="Choose Days.." multiple
+                        class="chosen-select" name="Filter Type">
+                    <option value="Type">Saturday</option>
+                    <option value="Type">Sunday</option>
+                    <option value="Type">Monday</option>
+                    <option value="Type">Tuesday</option>
+                    <option value="Type">Wednesday</option>
+                    <option value="Type">Thursday</option>
+                    <option value="Type">Friday</option>
+
+                </select>
+
+                <!-- Select Ingredients : id name = "DaySelect" . -->
+                <label for="DaySelect" class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Days Off</label>
+
+                <select id="DaySelect" data-placeholder="Choose Days.." multiple
+                        class="chosen-select" name="Filter Type">
+                    <option value="Type">Saturday</option>
+                    <option value="Type">Sunday</option>
+                    <option value="Type">Monday</option>
+                    <option value="Type">Tuesday</option>
+                    <option value="Type">Wednesday</option>
+                    <option value="Type">Thursday</option>
+                    <option value="Type">Friday</option>
+
+                </select>
+
+                <label>
+                    Address : <br>
+                    <textarea rows="2" type="text"></textarea>
+                </label>
+
+                <label>
+                    Public info : <br>
+                    <textarea rows="3" type="text"></textarea>
+                </label>
+
+                <label>
+                    About Us : <br>
+                    <textarea rows="3" type="text"></textarea>
+                </label>
+
+            </div>
+
+            <div class = "form3">
+
+                <h4 style = "border-bottom  : 3px solid #72683F; font-size:1.5rem;
+                margin-bottom: -0.5px;">Social Media : </h4>
+
+                <label>
+                    Instagram <br>
+                    <input type="url">
+                </label>
+                <label>
+                    Facebook <br>
+                    <input type="url">
+                </label>
+                <label>
+                    Twitter <br>
+                    <input type="url">
+                </label>
+                <label>
+                    Telegram <br>
+                    <input type="url">
+                </label>
+
+                <!-- Logo and restaurant name input. -->
+
+                <div style="display: flex; flex-direction: row; width: 20rem;">
+
+                    <div style="display: flex; flex-direction: column;">
+
+                        <!-- Image input : Class name = "u-input-2". -->
+
+                        <label>Logo</label>
+
+                        <img style="margin-top: 0.5rem;" id = "AddUserImage" src="images/default-image.jpg" alt="Section Description Image"
+                             class="u-image u-image-round u-preserve-proportions u-radius-10 AddSectionImage"
+                             data-image-width="150" data-image-height="101">
+
+                        <input onchange="loadFile(event)" type="file" id="AddMealImg" name="img" accept="image/*"
+                               class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input
+                        u-input-rectangle u-input-2" >
+
+                    </div>
+
+
+                    <label style="margin-left: -13rem;">
+                        Restaurant Name : <br>
+                        <input type="text" style="width: 13rem; ">
+                    </label>
+
+                </div>
+
+
+            </div>
+
+            <div class = "form2">
+
+                <h4 style = "border-bottom  : 3px solid #72683F; font-size:1.5rem;
+                margin-bottom: -0.5px;">Contact info : </h4>
+
+                <label>
+                    Mobile <br>
+                    <input type="tel">
+                </label>
+                <label>
+                    Telephone <br>
+                    <input type="tel">
+                </label>
+                <label>
+                    E-mail <br>
+                    <input type="email">
+                </label>
+
+                <h4 style=" border-bottom  : 3px solid #72683F;  font-size:1.5rem; margin-bottom: -0.5px;">
+                    Customer Rating :</h4>
+
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="text"></label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="text"></label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="text"></label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="text"></label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="text"></label>
+                </div>
+
+            </div>
+
+            <!-- Save Changes Button : Class name = "SaveChangesButton". -->
+            <div style = "margin-top: 33rem; margin-left:-18rem;">
+
+                <input type = "submit" value = "Save Changes" class = "SaveChangesButton">
+
+            </div>
+
+        </form>
+
+        <script>
+
+            /* Adding an image */
+
+            let loadFile = function(event) {
+                let image = document.getElementById('AddUserImage');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+
+            /* Select in add form js */
+
+            $('.chosen-select').chosen({
+                no_results_text: 'Oops, nothing found!'
+            });
+
+            $('.chosen-container').css(
+                {
+                    'width': '20rem',
+                    'background-color': 'beige',
+                    'margin-top': '8px',
+                    'margin-bottom': '8px',
+                    'font-family': 'Playfair Display'
+                });
+
+        </script>
+
+    </body>
+
+</html>

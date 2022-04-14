@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px;">
+    <head>
+
+        <title>Home</title>
+
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "utf-8">
+        <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+        <!-- CSS Links -->
+        <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+        <link rel = "stylesheet" href = "Home.css" media = "screen">
+        <link rel = "stylesheet" href = "HeaderStyling.css" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- JS Links -->
+        <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+        <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+
+        <!-- Awesome Library Link. -->
+        <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+
+    </head>
+
+    <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+
+        <header>
+
+            <div>
+                <h2>
+                    <span class = "dashes" onclick = "openNav()">&#9776;</span>
+
+                    <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+                </h2>
+
+                <!-- Sidebar. -->
+                <nav id = "sidebaar">
+
+                    <div class = "sideBar" id = "sideBar">
+
+                        <a href = "javascript:void(0)" class = "closeButton" onclick = "closeNav()">&times;</a>
+
+                        <div class = "logo">SJ Restaurant</div>
+
+                        <ul>
+                            <li><a style = "height: 3rem;" href = "Home.html">Home</a></li>
+
+                            <li>
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#menu">
+                                    Menu Management</a>
+
+                                <div id = "menuDiv" class = "menu">
+                                    <ul id = "menu" class = "collapse list-unstyled">
+                                        <li><a href = "Menu-Sections.html">&rarr;  Show Sections</a></li>
+                                        <li><a href = "Menu-Management.html">&rarr;  Show Menu</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a  style = "height: 3rem;" class = "employeeMan" href = "Employee-Management.html">
+                                    Employee Management</a>
+                            </li>
+
+                            <li>
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#customer">
+                                    Customer Management</a>
+
+                                <div id = "customerDiv" class = "menu">
+                                    <ul id = "customer" class = "collapse list-unstyled">
+                                        <li><a href = "Customer-Management.html">&rarr;  Show Customer Info</a></li>
+                                        <li><a href = "Reservation-Management.html">&rarr;  Show Reservations</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a style = "height: 3rem;" class = "offerMan" href = "Order-Management.html">
+                                    Order Management</a>
+                            </li>
+
+                            <li>
+                                <a style = "height: 3rem;" class = "offerMan" href = "Offer%20Management.html">
+                                    Offer Management</a>
+                            </li>
+
+                            <li>
+                                <a style = "height: 3rem;" class = "areaMan" href = "Area-Management.html">
+                                    Area Management</a>
+                            </li>
+
+                            <li>
+                                <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#stock">
+                                    Stock Management</a>
+
+                                <div id = "stockDiv" class = "menu">
+                                    <ul id = "stock" class = "collapse list-unstyled">
+                                        <li><a href = "Stock-Management.html">&rarr;  Show Stocks</a></li>
+                                        <li><a href = "Supplier-Management.html">&rarr;  Show Suppliers</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <p style = "width:100%; margin-left: -1rem; margin-top: 6rem; border-top: 2px solid white"></p>
+                                <a class = "stockMan" href = "Information-Page.html">
+                                    Restaurant Information</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+                <!-- Searchbar. -->
+                <div class="search-box">
+                    <button class="btn-search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <input type="text" class="input-search" placeholder="Type to Search...">
+                </div>
+
+                <!-- User icon. -->
+                <div class = "userIcon">
+
+                    <!-- <img src = "images/sadEmployeeIcon.jpg" alt = "User icon" class = "icon"> -->
+
+                    <div class = "userList">
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="u-clearfix u-gradient u-section-1" id="sec-4543">
+
+            <div class="u-clearfix u-sheet u-sheet-1">
+
+                <!-- Offer Management : Class name = "u-btn-1". -->
+                <div class="u-border-3 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                u-group-1" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="">
+                    <div class="u-container-layout u-valign-middle u-container-layout-1">
+                        <img class = "offerIcon" src = "images/offerIcon.png">
+                        <a href="Offer%20Management.html" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-none
+                            u-btn-1">
+                            Offer Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Management : Class name = "u-btn-2". -->
+                <div class="u-border-3 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                u-group-2" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="" data-href="Menu-Management.html" data-page-id="2442109025">
+                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                        <img class = "menuIcon" src = "images/menuIcon.png">
+                        <a href="Menu-Sections.html" data-page-id="2442109025" class="u-active-none u-btn
+                         u-btn-rectangle u-button-style u-hover-none u-none u-text-custom-color-8
+                          u-btn-2">
+                            Menu Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Employee Management : Class name = "u-btn-3". -->
+                <div class="u-border-3 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                 u-group-3" data-href="Employee-Management.html" data-page-id="56529218"
+                     data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="">
+                    <div class="u-container-layout u-valign-middle u-container-layout-3">
+                        <img class = "employeeIcon" src = "images/employeeIcon.png">
+                        <a href = "Employee-Management.html" data-page-id="56529218" class="u-active-none
+                        u-btn u-btn-rectangle u-button-style u-hover-none u-none u-text-custom-color-8
+                         u-btn-3">
+                            Employee Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Customer Management : Class name = "u-btn-4". -->
+                <div class="u-border-3 u-border-custom-color-8 u-container-style u-group u-radius-7 u-shape-round
+                u-group-4" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-href="Customer-Management.html" data-page-id="2189603526">
+                    <div class="u-container-layout u-valign-middle u-container-layout-4">
+                        <img class = "customerIcon" src = "images/customerIcon.png">
+                        <a href="Customer-Management.html" data-page-id="2189603526" class="u-active-none u-btn
+                        u-btn-rectangle u-button-style u-hover-none u-none u-text-custom-color-8
+                          u-btn-4">
+                            Customer Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stock Management : Class name = "u-btn-5". -->
+                <div class="u-border-2 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                 u-group-5" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="">
+                    <div class="u-container-layout u-valign-middle u-container-layout-5">
+                        <img class = "stockIcon" src = "images/stockIcon.png">
+                        <a href="Stock-Management.html" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-none
+                         u-text-custom-color-8  u-btn-5">
+                            Stock Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Area Management : Class name = "u-btn-6". -->
+                <div class="u-border-3 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                 u-group-6" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="">
+                    <div class="u-container-layout u-valign-middle u-container-layout-6">
+                        <img class = "areaIcon" src = "images/buildingIcon.png">
+                        <a href="Area-Management.html" data-page-id="56529218" class="u-active-none 7 u-btn
+                        u-btn-rectangle u-button-style u-hover-none u-none u-text-custom-color-8
+                         u-btn-6">
+                            Area Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Management : Class name = "u-btn-7". -->
+                <div class="u-border-2 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                 u-group-7" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="">
+                    <div class="u-container-layout u-valign-middle u-container-layout-7">
+                        <img class = "galleryIcon" src = "images/galleryIcon.png">
+                        <a href="Gallery.html" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-none
+                         u-text-custom-color-8 u-btn-7">
+                            Gallery Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Order Management : Class name = "u-btn-8". -->
+                <div class="u-border-3 u-border-custom-color-8 u-container-style u-group u-radius-6 u-shape-round
+                 u-group-8" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0"
+                     data-animation-direction="">
+                    <div class="u-container-layout u-valign-middle u-container-layout-8">
+                        <img class = "orderIcon" src = "images/serviceIcon.png">
+                        <a href="Order-Management.html" data-page-id="56529218" class="u-active-none 7 u-btn
+                        u-btn-rectangle u-button-style u-hover-none u-none u-text-custom-color-8
+                         u-btn-8">
+                            Order Management
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <script class = "u-script" type = "text/javascript" src = "NavigationBar.js"></script>
+
+    </body>
+</html>

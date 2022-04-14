@@ -1,0 +1,585 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-repeat   : repeat;
+    background-position : center;
+    background-size     : 100vw 100vh;
+}
+
+.u-section-1 .u-sheet-1
+{
+    min-height : 880px;
+}
+
+/* Buttons on top */
+
+.u-section-1 .u-group-3
+{
+    width       : 686px;
+    min-height  : 74px;
+    margin-top  : 1rem;
+    margin-left : 13em;
+}
+
+.u-section-1 .u-btn-3
+{
+    margin       : 1em auto 0 20em;
+    padding      : 0.3em 2em;
+    font-size    : 1.5em;
+    font-weight  : 700;
+    border-style : solid;
+    box-shadow   : 5px 5px 11px 0 rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-btn-2
+{
+    margin       : -1.8em auto 0 1em;
+    padding      : 0.3em 2em;
+    font-size    : 1.5em;
+    font-weight  : 700;
+    border-style : solid;
+    box-shadow   : 5px 5px 11px 0 rgba(100, 83, 53, 1);
+}
+
+.fa-plus, .fa-book
+{
+    margin-right : 1em;
+    font-size    : 20px;
+    color        : #645335;
+}
+
+.u-section-1 .u-btn-2:hover .fa-plus,
+.u-section-1 .u-btn-1:hover .fa-book
+{
+    color : white;
+}
+
+.u-section-1 .u-btn-1:hover,
+.u-section-1 .u-btn-2:hover
+{
+    box-shadow : none;
+}
+
+.u-section-1 .u-text-1
+{
+    width              : 242px;
+    margin             : 1px 420px 0;
+    animation-duration : 2000ms;
+    font-family        : 'Playfair Display', Serif;
+    font-size          : 7.75rem;
+    font-style         : italic;
+    text-shadow        : 2px 2px 6px rgba(100, 83, 53, 0.7);
+}
+
+.u-section-1 .u-list-1
+{
+    width              : 693px;
+    height             : auto;
+    min-height         : 696px;
+    margin             : 36px auto 60px 19px;
+    grid-template-rows : auto auto;
+    grid-auto-rows     : 100%;
+}
+
+.u-section-1 .u-repeater-1
+{
+    width                 : 78em;
+    margin-right          : auto;
+    margin-left           : -10rem;
+    grid-auto-columns     : calc(50% - 50px);
+    grid-template-columns : calc(30% - 30px) calc(30% - 30px) calc(30% - 30px);
+    grid-auto-rows        : calc(35% - 0px);
+    grid-gap              : 90px 200px;
+}
+
+.u-section-1 .u-list-item-1
+{
+    transition-duration : 3s;
+    animation-duration  : 1500ms;
+    box-shadow          : 4px 4px 10px 2px rgba(100, 83, 53, 0.9);
+}
+
+.u-section-1 .u-image-1
+{
+    background-size : cover;
+}
+
+.u-section-1 .u-container-layout-1
+{
+    padding : 0 0 30px 30px;
+}
+
+.u-section-1 .u-group-1
+{
+    width           : 307px;
+    height          : 0;
+    min-height      : auto;
+    margin-top      : 1.5rem;
+    background-size : auto;
+}
+
+.u-section-1 .u-container-layout-2
+{
+    padding : 0 25px;
+}
+
+.u-section-1 .u-text-2
+{
+    margin             : 2em 0 0 1.8rem;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+    font-size          : 3em;
+    font-weight        : 700;
+    font-style         : italic;
+    text-decoration    : none solid rgb(17, 17, 17);
+}
+
+.u-section-1 .u-text-3,
+.u-section-1 .u-text-5
+{
+    visibility         : hidden;
+    margin             : 1rem 3em 8rem auto;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1.5em;
+    font-style         : italic;
+}
+
+.u-section-1 .u-text-4
+{
+    visibility         : hidden;
+    margin             : -6rem 2rem 0 auto;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1.5em;
+    font-weight        : normal;
+    background-image   : none;
+
+}
+
+.u-section-1 .u-btn-1
+{
+    visibility         : hidden;
+    margin             : 1rem 0 0 -0.2em;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1s;
+    font-size          : 1em;
+    font-weight        : 700;
+    font-style         : italic;
+    text-transform     : none;
+    border-style       : solid;
+    box-shadow         : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.u-section-1 .u-btn-1:hover,
+.u-section-1 .u-list-item-1:hover,
+.ConfirmButton:hover
+{
+    border-color : #C5A978;
+    box-shadow   : none;
+}
+
+.u-section-1 .u-list-item-1:hover .u-text-2
+{
+    display            : none;
+
+    animation-name     : fadeOutRight;
+    animation-duration : 2000ms;
+}
+
+.u-section-1 .u-list-item-1:hover .u-text-3,
+.u-section-1 .u-list-item-1:hover .u-text-4,
+.u-section-1 .u-list-item-1:hover .u-text-5,
+.u-section-1 .u-list-item-1:hover .u-btn-1,
+.u-section-1 .u-list-item-1:hover .fa-trash,
+.u-section-1 .u-list-item-1:hover .fa-info
+{
+    visibility         : visible;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+}
+
+.Buttons
+{
+    display    : flex;
+    margin-top : 1em;
+}
+
+.fa-trash,
+.fa-info
+{
+    visibility   : hidden;
+    margin-top   : 1.4rem;
+    margin-right : 1em;
+    margin-left  : 1em;
+    font-size    : 2.2em;
+    color        : #645335;
+}
+
+.fa-info
+{
+    margin-left : 0.5rem;
+}
+
+.fa-trash:hover,
+.fa-info:hover
+{
+    color : #C5A978;
+}
+
+/* Confirmation Popup Screen */
+
+.AddMeal,
+.EditMeal,
+.deleteConfirm,
+.ingredients
+{
+    position   : fixed;
+    z-index    : 10000;
+    top        : 0;
+    left       : 0;
+    display    : none;
+    overflow   : auto;
+    width      : 100%;
+    height     : 100%;
+    cursor     : pointer;
+    text-align : center;
+    background : rgba(100, 83, 53, 0.5);
+}
+
+.AddMeal .helper,
+.EditMeal .helper,
+.deleteConfirm .helper,
+.ingredients .helper
+{
+    display        : inline-block;
+    height         : 100%;
+    vertical-align : middle;
+}
+
+.AddMeal > div,
+.EditMeal > div,
+.deleteConfirm > div,
+.ingredients > div
+{
+    position         : relative;
+    display          : inline-block;
+    width            : 60%;
+    height           : 100%;
+    min-height       : 100px;
+    max-height       : 551px;
+    padding          : 15px 5%;
+    vertical-align   : middle;
+    border-radius    : 20px;
+    background-color : #D9C79E;
+    box-shadow       : 10px 10px 60px rgb(100, 83, 53);
+}
+
+.deleteConfirm > div,
+.ingredients > div
+{
+    height : auto;
+}
+
+.AddMeal .ACloseButton,
+.EditMeal .CloseButton,
+.deleteConfirm .DCloseButton,
+.ingredients .ICloseButton
+{
+    position         : absolute;
+    top              : -20px;
+    right            : -20px;
+    left             : -10px;
+    display          : inline-block;
+    width            : 30px;
+    height           : 30px;
+    cursor           : pointer;
+    font-family      : Arial, serif;
+    font-size        : 25px;
+    font-weight      : bold;
+    font-style       : italic;
+    line-height      : 30px;
+    text-align       : center;
+    color            : #2E2C25;
+    border-radius    : 50px;
+    background-color : #D9C79E;
+
+    box-shadow       : 4px 4px 14px 0 rgb(100, 83, 53);
+}
+
+.ACloseButton:hover,
+.CloseButton:hover,
+.DCloseButton:hover,
+.ICloseButton:hover
+{
+    background-color : rgb(100, 83, 53);
+}
+
+.trigger
+{
+    margin      : 20px;
+    cursor      : pointer;
+    font-size   : 20px;
+    font-weight : bold;
+}
+
+.ConfirmButton,
+.deleteButton
+{
+    margin-bottom  : 0;
+    margin-left    : 22em;
+    font-style     : italic;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+#ingredientsID
+{
+    margin-right : 2rem;
+    font-size    : 2.5rem;
+}
+
+.SaveSectionButton
+{
+    margin-right : 19rem;
+}
+
+.SaveMealButton
+{
+    margin-right : 3rem;
+}
+
+.ConfirmText
+{
+    font-family : 'Playfair Display', serif;
+    font-size   : 3rem;
+    font-style  : italic;
+    color       : #2E2C25;
+}
+
+/* Inner Form */
+
+.u-section-1 .u-inner-form
+{
+    display     : block;
+    width       : 64rem;
+    height      : 168px;
+    margin-top  : 4em;
+    margin-left : 10em;
+}
+
+.u-form-name
+{
+    margin-top  : -31rem;
+    margin-left : 17rem;
+}
+
+.u-section-1 .u-input-2
+{
+    margin-bottom : 5em;
+    margin-left   : -13em;
+    font-size     : 1.2em;
+    border-bottom : none;
+}
+
+.u-section-1 label
+{
+    margin-top    : 0.5rem;
+    margin-bottom : 0;
+    font-size     : 2em;
+}
+
+.u-section-1 .AddSectionName
+{
+    margin-bottom  : 0.5rem;
+    font-size      : 1.7em;
+    text-transform : capitalize;
+}
+
+.u-section-1 .SaveSectionButton,
+.u-section-1 .SaveMealButton
+{
+    height         : 4rem;
+    margin-left    : 18.5rem;
+    font-size      : 1.7em;
+    font-weight    : 700;
+    font-style     : italic;
+    letter-spacing : normal;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 5px 5px 16px 0px rgb(100, 83, 53);
+}
+
+.u-section-1 .SaveSectionButton:hover,
+.u-section-1 .deleteButton:hover,
+.u-section-1 .SaveMealButton:hover
+{
+    box-shadow : none;
+}
+
+.u-section-1 .AddSectionImage
+{
+    width       : 279px;
+    height      : 188px;
+    margin-left : -15em;
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        grid-template-columns : repeat(2, calc(50% - 50px));
+    }
+
+    .u-section-1 .u-group-1
+    {
+        height : auto;
+    }
+
+    .u-section-1 .u-group-2
+    {
+        height : auto;
+    }
+
+    .u-section-1 .u-group-3
+    {
+        height : auto;
+    }
+
+    .u-section-1 .u-group-4
+    {
+        height : auto;
+    }
+
+    #userIcon
+    {
+        margin : -4.75em -1.9375em 2.625em 90em;
+    }
+}
+
+@media (max-width : 991px)
+{
+    .u-section-1 .u-repeater-1
+    {
+        grid-auto-columns     : calc(100% - 0px);
+        grid-template-columns : 100%;
+        grid-auto-rows        : calc(33.33% - 66.66666666666667px);
+    }
+
+    #userIcon
+    {
+        margin : -14.75em -1.9375em 1em 40em;
+    }
+    .search
+    {
+        margin-top  : 1em;
+        margin-left : 30em;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-list-1
+    {
+        width       : 540px;
+        margin-left : 0;
+    }
+
+    .u-section-1 .u-repeater-1
+    {
+        grid-auto-columns : 100%;
+        grid-auto-rows    : calc(16.66% - 83.33333333333333px);
+    }
+
+    .u-section-1 .u-container-layout-1
+    {
+        padding-left : 10px;
+    }
+
+    .u-section-1 .u-container-layout-2
+    {
+        padding-right : 10px;
+        padding-left  : 10px;
+    }
+
+    .u-section-1 .u-container-layout-3
+    {
+        padding-left : 10px;
+    }
+
+    .u-section-1 .u-container-layout-4
+    {
+        padding-right : 10px;
+        padding-left  : 10px;
+    }
+
+    .u-section-1 .u-container-layout-5
+    {
+        padding-left : 10px;
+    }
+
+    .u-section-1 .u-container-layout-6
+    {
+        padding-right : 10px;
+        padding-left  : 10px;
+    }
+
+    .u-section-1 .u-container-layout-7
+    {
+        padding-left : 10px;
+    }
+
+    .u-section-1 .u-container-layout-8
+    {
+        padding-right : 10px;
+        padding-left  : 10px;
+    }
+
+    #userIcon
+    {
+        margin : -12.75em -1.9375em 2.625em 30em;
+    }
+    .search
+    {
+        margin-top  : 1em;
+        margin-left : 30em;
+    }
+}
+
+@media (max-width : 575px)
+{
+    .u-section-1 .u-text-1
+    {
+        font-size : 3.25rem;
+    }
+
+    .u-section-1 .u-list-1
+    {
+        width : 340px;
+    }
+
+    #userIcon
+    {
+        margin : -15.75em -1.9375em 0 20em;
+    }
+    .search-container
+    {
+        margin-left : -20em;
+    }
+    .u-section-1 .u-group-1
+    {
+        width  : 20rem;
+        height : 30rem;
+    }
+
+    .u-section-1 .u-repeater-1
+    {
+        width : 30rem;
+    }
+    .menu-collapse .u-nav-link svg
+    {
+        margin-left : 3rem;
+    }
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px;">
+  <head>
+
+      <title>Customer Management</title>
+
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+      <meta charset = "utf-8">
+      <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+      <!-- CSS Links -->
+      <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+      <link rel = "stylesheet" href = "Customer-Management.css" media = "screen">
+      <link rel = "stylesheet" href = "HeaderStyling.css" media = "screen">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <!-- JS Links -->
+      <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+      <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+
+      <!-- Awesome Library Link. -->
+      <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      />
+
+  </head>
+
+  <body class="u-body">
+
+  <header>
+
+      <div>
+          <h2>
+              <span class = "dashes" onclick = "openNav()">&#9776;</span>
+
+              <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+          </h2>
+
+          <!-- Sidebar. -->
+          <nav id = "sidebaar">
+
+              <div class = "sideBar" id = "sideBar">
+
+                  <a href = "javascript:void(0)" class = "closeButton" onclick = "closeNav()">&times;</a>
+
+                  <div class = "logo">SJ Restaurant</div>
+
+                  <ul>
+                      <li><a style = "height: 3rem;" href = "Home.html">Home</a></li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#menu">
+                              Menu Management</a>
+
+                          <div id = "menuDiv" class = "menu">
+                              <ul id = "menu" class = "collapse list-unstyled">
+                                  <li><a href = "Menu-Sections.html">&rarr;  Show Sections</a></li>
+                                  <li><a href = "Menu-Management.html">&rarr;  Show Menu</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a  style = "height: 3rem;" class = "employeeMan" href = "Employee-Management.html">
+                              Employee Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#customer">
+                              Customer Management</a>
+
+                          <div id = "customerDiv" class = "menu">
+                              <ul id = "customer" class = "collapse list-unstyled">
+                                  <li><a href = "Customer-Management.html">&rarr;  Show Customer Info</a></li>
+                                  <li><a href = "Reservation-Management.html">&rarr;  Show Reservations</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Order-Management.html">
+                              Order Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Offer%20Management.html">
+                              Offer Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "areaMan" href = "Area-Management.html">
+                              Area Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#stock">
+                              Stock Management</a>
+
+                          <div id = "stockDiv" class = "menu">
+                              <ul id = "stock" class = "collapse list-unstyled">
+                                  <li><a href = "Stock-Management.html">&rarr;  Show Stocks</a></li>
+                                  <li><a href = "Supplier-Management.html">&rarr;  Show Suppliers</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <p style = "width:100%; margin-left: -1rem; margin-top: 6rem; border-top: 2px solid white"></p>
+                          <a class = "stockMan" href = "Information-Page.html">
+                              Restaurant Information</a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+          </nav>
+
+          <!-- Searchbar. -->
+          <div class="search-box">
+              <button class="btn-search">
+                  <i class="fas fa-search"></i>
+              </button>
+
+              <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+
+          <!-- User icon. -->
+          <div class = "userIcon">
+
+              <!-- <img src = "images/sadEmployeeIcon.jpg" alt = "User icon" class = "icon"> -->
+
+              <div class = "userList">
+
+
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </header>
+
+      <section class="u-clearfix u-gradient u-section-1" id="sec-2285">
+
+          <!-- Add Order button : Class name = "u-btn-1". -->
+          <a style="margin-bottom: -4rem;margin-top: 4rem; margin-left: 110rem;"
+             href = "Reservation-Management.html" data-page-id="884108653" class="u-border-2 u-border-custom-color-8
+                u-btn u-btn-round u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8
+                u-none u-radius-5 u-text-custom-color-8 u-text-hover-white u-btn-1"
+             onclick="document.getElementById('CustomerInfo').style.display = 'block'">
+              <i class = "fa fa-bookmark" style = "margin-right: 1rem;"></i>
+              Show Reservation
+          </a>
+
+          <div class="u-clearfix u-sheet u-sheet-1">
+
+              <h2 class="u-custom-font u-font-playfair-display u-text u-text-custom-color-8 u-text-1">Customer Management</h2>
+
+              <div class="u-table u-table-responsive u-table-1">
+
+                  <table class="u-table-entity">
+
+                      <!-- Defining Column Widths. -->
+                      <colgroup>
+                          <col width="6.8%">
+                          <col width="9.3%">
+                          <col width="13.2%">
+                          <col width="10.1%">
+                          <col width="15.5%">
+                          <col width="15.3%">
+                          <col width="14.1%">
+                          <col width="9.8%">
+                      </colgroup>
+
+                      <!-- Table Head. -->
+                      <thead class="u-custom-color-8 u-custom-font u-font-playfair-display u-table-header u-table-header-1">
+                          <tr style="height: 65px;">
+                            <th class="u-table-cell">ID</th>
+                            <th class="u-table-cell">First Name</th>
+                            <th class="u-table-cell">Last Name</th>
+                            <th class="u-table-cell">Num of visits</th>
+                            <th class="u-table-cell">Number</th>
+                            <th class="u-table-cell">Email</th>
+                            <th class="u-table-cell">Address</th>
+                            <th class="u-table-cell">Birthday</th>
+                          </tr>
+                        </thead>
+
+                      <!-- Table Body. -->
+                      <tbody class="u-table-body">
+                          <tr style="height: 71px;">
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                01
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                Micheal
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                Rockel
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                2
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                --
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                --
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                --
+                            </td>
+                            <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                --
+                            </td>
+                          </tr>
+                          <tr style="height: 71px;">
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  02
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  Sarah
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  Dann
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  10
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  +90 (588) 968 23 54
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  Sarah.Dann@gmail.com
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  Istanbul (Asia) - Uskudar
+                              </td>
+                              <td class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-table-cell">
+                                  05 / 09 / 2000
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </section>
+
+  <script class = "u-script" type = "text/javascript" src = "NavigationBar.js"></script>
+
+
+  </body>
+
+</html>

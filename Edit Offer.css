@@ -1,0 +1,334 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-position : center;
+    background-size     : 100%;
+}
+
+.u-section-1 .u-sheet-1
+{
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    justify-content : center;
+    min-height      : 500px;
+}
+
+.u-section-1 .u-text-1
+{
+    width     : 550px;
+    margin    : 2rem 20rem 0 0;
+    font-size : 3rem;
+}
+
+.u-section-1 .u-btn-1
+{
+    margin       : -4rem 10rem 0 auto;
+    padding      : 6px 43px 6px 41px;
+    font-size    : 2rem;
+    font-weight  : 700;
+    border-style : solid;
+    box-shadow   : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-btn-1:hover
+{
+    box-shadow : none;
+}
+
+.u-section-1 .u-btn-1:hover .fa-plus
+{
+    color : white;
+}
+
+.fa-plus
+{
+    margin-right : 5px;
+    font-size    : 20px;
+    color        : #645335;
+}
+
+.u-section-1 .u-table-1
+{
+    width       : 617px;
+    margin      : 56px auto 0;
+    font-family : 'Playfair Display', serif;
+    font-size   : 1.7rem;
+}
+
+.u-section-1 .u-table-header-1
+{
+    font-size        : 1.5rem;
+
+    font-weight      : 700;
+    text-transform   : none;
+    border-radius    : 6px;
+    background-image : none;
+}
+
+.fa-trash,
+.fa-info,
+.fa-edit
+{
+    margin    : 0 1.7rem 0 1rem;
+    font-size : 2.5rem;
+}
+
+.edit, .eraser
+{
+    color : #645335;
+}
+
+.edit:hover, .eraser:hover
+{
+    color : #A78C57;
+}
+
+.edit:hover .update, .eraser:hover .delete
+{
+    visibility         : visible;
+    animation-name     : fadeIn;
+    animation-duration : 1s;
+}
+
+.delete
+{
+    position    : absolute;
+    z-index     : 1;
+    bottom      : 40%;
+    left        : 32%;
+    visibility  : hidden;
+    margin-left : -60px;
+    font-family : 'Playfair Display', serif;
+    color       : #2E2C25;
+}
+
+.update
+{
+    position    : absolute;
+    z-index     : 1;
+    bottom      : 40%;
+    left        : 60%;
+    visibility  : hidden;
+    margin-left : -60px;
+    font-family : 'Playfair Display', serif;
+    color       : #2E2C25;
+}
+
+.xx:hover
+{
+    cursor : pointer;
+    color  : #72683F;
+}
+
+.xx:hover .tooltip
+{
+
+    visibility          : visible;
+    animation-name      : fadeIn;
+    animation-duration  : 1s;
+    animation-direction : alternate;
+
+}
+
+.tooltip
+{
+    position         : absolute;
+    z-index          : 1;
+    top              : -5px;
+    right            : 105%;
+    visibility       : hidden;
+    width            : max-content;
+    padding          : 10px 25px;
+    text-align       : left;
+    color            : #2E2C25;
+    border-radius    : 6px;
+    background-color : rgba(197, 169, 120, 0.8);
+}
+
+/* Delete confirmation */
+
+.deleteConfirm
+{
+    font-size   : 3rem;
+    font-family : 'Playfair Display', serif;
+    font-style: italic;
+    position    : fixed;
+    z-index     : 10000;
+    top         : 0;
+    left        : 0;
+    display     : none;
+    overflow    : auto;
+    width       : 100%;
+    height      : 100%;
+    cursor      : pointer;
+    text-align  : center;
+    background : rgba(100, 83, 53, 0.5);
+}
+
+.deleteConfirm .helper
+{
+    display        : inline-block;
+    height         : 100%;
+    vertical-align : middle;
+}
+
+.deleteConfirm > div
+{
+    position         : relative;
+    display          : inline-block;
+    width            : 60%;
+    height           : auto;
+    min-height       : 100px;
+    max-height       : 551px;
+    padding          : 15px 5%;
+    vertical-align   : middle;
+    border-radius    : 20px;
+    background-color : #D9C79E;
+    box-shadow       : 10px 10px 60px rgb(100, 83, 53);
+}
+
+.deleteConfirm .DCloseButton
+{
+    position         : absolute;
+    top              : -20px;
+    right            : -20px;
+    left             : -10px;
+    display          : inline-block;
+    width            : 30px;
+    height           : 30px;
+    cursor           : pointer;
+    font-family      : Arial, serif;
+    font-size        : 25px;
+    font-weight      : bold;
+    font-style       : italic;
+    line-height      : 30px;
+    text-align       : center;
+    color            : #2E2C25;
+    border-radius    : 50px;
+    background-color : #D9C79E;
+
+    box-shadow       : 4px 4px 14px 0 rgb(100, 83, 53);
+}
+
+.DCloseButton:hover
+{
+    background-color : rgb(100, 83, 53);
+}
+
+.trigger
+{
+    margin      : 20px;
+    cursor      : pointer;
+    font-size   : 20px;
+    font-weight : bold;
+}
+
+.deleteButton
+{
+    margin-bottom  : 0;
+    margin-left    : 35rem;
+    font-style     : italic;
+    font-size: 2rem;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+.deleteButton:hover
+{
+    box-shadow: none;
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-text-1
+    {
+        margin-right : 700px;
+        margin-left  : 42px;
+    }
+
+    .u-section-1 .u-btn-1
+    {
+        margin-right : 0;
+    }
+}
+
+@media (max-width : 991px)
+{
+    .u-section-1 .u-text-1
+    {
+        margin-right : 500px;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-text-1
+    {
+        margin-right : 320px;
+        margin-left  : 2px;
+    }
+
+    .u-section-1 .u-table-1
+    {
+        width : 540px;
+    }
+    .fa-trash, .fa-info
+    {
+        margin    : 0 33px 0 22px;
+        font-size : 25px;
+    }
+
+    .delete
+    {
+        left : 47%;
+    }
+    .update
+    {
+        left : 89%;
+    }
+}
+
+@media (max-width : 575px)
+{
+    body
+    {
+        background-size : contain;
+    }
+    .u-section-1 .u-text-1
+    {
+        margin-top   : 10px;
+        margin-right : 100px;
+        margin-left  : 1px;
+        font-weight  : bolder;
+    }
+
+    .u-section-1 .u-table-1
+    {
+        width      : 330px;
+        margin-top : 15px;
+    }
+
+    .fa-trash, .fa-info
+    {
+        margin    : 0 10px 0 10px;
+        font-size : 20px;
+    }
+    .u-section-1 .u-btn-1
+    {
+        margin-top   : 10px;
+        margin-right : 10px;
+        padding      : 2px 15px 2px 15px;
+        font-size    : 15px;
+    }
+    .delete
+    {
+        left : 67%;
+    }
+    .update
+    {
+        left : 105%;
+    }
+}

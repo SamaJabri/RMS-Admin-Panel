@@ -1,0 +1,611 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-repeat   : repeat;
+    background-position : center;
+    background-size     : 100vw 100vh;
+}
+
+.u-section-1 .u-sheet-1
+{
+    min-height : 32.5em;
+}
+
+.u-section-1 .u-group-1
+{
+    width              : 14.3125em;
+    height             : auto;
+    min-height         : 9.8125em;
+    margin-top         : 9.6875em;
+    margin-left        : 22em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 19px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-1
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-1
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    background-image   : none;
+}
+
+.u-section-1 .u-group-2
+{
+    width              : 14.3125em;
+    height             : auto;
+    min-height         : 9.8125em;
+    margin-top         : 7em;
+    margin-left        : 22em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-2
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-2
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    border-style       : none none solid;
+    background-image   : none;
+}
+
+.u-section-1 .u-group-3
+{
+    width              : 14.3125em;
+    height             : auto;
+    min-height         : 9.8125em;
+    margin-top         : -27em;
+    margin-left        : 48em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-3
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-3
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    border-style       : none none solid;
+    background-image   : none;
+}
+
+.u-section-1 .u-group-4
+{
+    width       : 14.3125em;
+    min-height  : 9.8125em;
+    margin-top  : 7em;
+    margin-left : 48em;
+    color       : rgb(100, 83, 53);
+    box-shadow  : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-4
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-4
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    border-style       : none none solid;
+    background-image   : none;
+}
+
+.u-section-1 .u-group-5
+{
+    width              : 14.3125em;
+    min-height         : 9.8125em;
+    margin-top         : -27em;
+    margin-left        : 73em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 19px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-5
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-5
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    border-style       : none none solid;
+}
+
+.u-section-1 .u-group-6
+{
+    width              : 14.3125em;
+    height             : auto;
+    min-height         : 9.8125em;
+    margin-top         : 7em;
+    margin-left        : 73em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-6
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-6
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    word-break         : break-word;
+    border-style       : none none solid;
+    background-image   : none;
+}
+
+.u-section-1 .u-group-7
+{
+    width              : 14.3125em;
+    height             : auto;
+    min-height         : 9.8125em;
+    margin-top         : -26em;
+    margin-left        : -3em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-7
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-7
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    word-break         : break-word;
+    border-style       : none none solid;
+    background-image   : none;
+}
+
+.u-section-1 .u-group-8
+{
+    width              : 14.3125em;
+    height             : auto;
+    min-height         : 9.8125em;
+    margin-top         : 7em;
+    margin-left        : -3em;
+    animation-duration : 1000ms;
+    color              : rgb(100, 83, 53);
+    box-shadow         : 7px 7px 16px 3px rgba(100, 83, 53, 1);
+}
+
+.u-section-1 .u-container-layout-8
+{
+    padding-right : 0.1875em;
+    padding-left  : 0.1875em;
+}
+
+.u-section-1 .u-btn-8
+{
+    visibility         : hidden;
+    margin             : 0 auto;
+    padding            : 0;
+    animation-name     : fadeOutLeft;
+    animation-duration : 1000ms;
+    font-family        : 'Playfair Display', serif;
+    font-size          : 2.7rem;
+    font-style         : italic;
+    word-break         : break-word;
+    border-style       : none none solid;
+    background-image   : none;
+}
+
+.u-section-1 .u-container-layout-1,
+.u-section-1 .u-container-layout-2,
+.u-section-1 .u-container-layout-3,
+.u-section-1 .u-container-layout-4,
+.u-section-1 .u-container-layout-5,
+.u-section-1 .u-container-layout-6,
+.u-section-1 .u-container-layout-7,
+.u-section-1 .u-container-layout-8
+{
+    height : 5rem;
+}
+
+.u-section-1 .u-btn-1,
+.u-section-1 .u-btn-2,
+.u-section-1 .u-btn-3,
+.u-section-1 .u-btn-4,
+.u-section-1 .u-btn-5,
+.u-section-1 .u-btn-6,
+.u-section-1 .u-btn-7,
+.u-section-1 .u-btn-8
+{
+    width       : 17rem;
+    white-space : pre-line;
+    word-break  : break-word;
+}
+
+.offerIcon,
+.menuIcon,
+.employeeIcon,
+.customerIcon,
+.stockIcon,
+.areaIcon,
+.galleryIcon,
+.orderIcon
+{
+    position           : center;
+    top                : 165%;
+    left               : 25%;
+    width              : 7em;
+    height             : 7em;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+}
+
+.u-group-1:hover .u-btn-1,
+.u-group-2:hover .u-btn-2,
+.u-group-3:hover .u-btn-3,
+.u-group-4:hover .u-btn-4,
+.u-group-5:hover .u-btn-5,
+.u-group-6:hover .u-btn-6,
+.u-group-7:hover .u-btn-7,
+.u-group-8:hover .u-btn-8
+{
+    position           : center;
+    top                : -35%;
+    left               : 0;
+    visibility         : visible;
+    animation-name     : fadeInRight;
+    animation-duration : 1000ms;
+}
+
+.u-group-1:hover .offerIcon,
+.u-group-2:hover .menuIcon,
+.u-group-3:hover .employeeIcon,
+.u-group-4:hover .customerIcon,
+.u-group-5:hover .stockIcon,
+.u-group-6:hover .areaIcon,
+.u-group-7:hover .galleryIcon,
+.u-group-8:hover .orderIcon
+{
+    animation-name      : fadeOutRight;
+    animation-duration  : 1000ms;
+    animation-fill-mode : forwards;
+}
+
+.u-section-1 .u-group-8:hover,
+.u-section-1 .u-group-7:hover,
+.u-section-1 .u-group-6:hover,
+.u-section-1 .u-group-5:hover,
+.u-section-1 .u-group-4:hover,
+.u-section-1 .u-group-3:hover,
+.u-section-1 .u-group-2:hover,
+.u-section-1 .u-group-1:hover
+{
+    color      : #3A3A3A;
+    box-shadow : none;
+}
+
+.u-section-1 .u-text-1
+{
+    margin : 3.875em 0.75em 0.9375em 52.75em;
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-group-1
+    {
+        height      : auto;
+        margin-left : -3.375em;
+    }
+
+    .u-section-1 .u-group-2
+    {
+        height      : auto;
+        margin-top  : 4.25em;
+        margin-left : -3.375em;
+    }
+
+    .u-section-1 .u-container-layout-2
+    {
+        padding-top : 0;
+    }
+
+    .u-section-1 .u-group-3
+    {
+        height      : auto;
+        margin-top  : -24.5em;
+        margin-left : 25.375em;
+    }
+
+    .u-section-1 .u-group-4
+    {
+        height      : auto;
+        margin-top  : 4.7em;
+        margin-left : 25.375em;
+    }
+    .u-section-1 .u-group-5
+    {
+        height      : auto;
+        margin-top  : 4.25em;
+        margin-left : -3.375em;
+    }
+
+    .u-section-1 .u-group-6
+    {
+        height      : auto;
+        margin-top  : -9.875em;
+        margin-left : 25.375em;
+    }
+    .u-section-1 .u-group-7
+    {
+        height      : auto;
+        margin-top  : -30.875em;
+        margin-left : 52.375em;
+    }
+    .u-section-1 .u-group-8
+    {
+        height      : auto;
+        margin-top  : 5.875em;
+        margin-left : 52.375em;
+    }
+
+    .u-section-1 .u-text-1
+    {
+        margin-right : 0;
+        margin-left  : 41em;
+    }
+    #userIcon
+    {
+        margin : -4.75em -1.9375em 2.625em 90em;
+    }
+}
+
+@media (max-width : 991px)
+{
+    .u-section-1 .u-group-1
+    {
+        margin-top  : 0.625em;
+        margin-left : 3.125em;
+    }
+
+    .u-section-1 .u-group-2
+    {
+        margin-top  : 0.625em;
+        margin-left : 25em;
+    }
+
+    .u-section-1 .u-group-3
+    {
+        margin-top  : 0.625em;
+        margin-left : 3.125em;
+    }
+
+    .u-section-1 .u-group-4
+    {
+        margin-top  : 0.625em;
+        margin-left : 25em;
+    }
+
+    .u-section-1 .u-group-5
+    {
+        margin-top  : 0.625em;
+        margin-left : 3.125em;
+    }
+
+    .u-section-1 .u-group-6
+    {
+        margin-top  : 0.625em;
+        margin-left : 25em;
+    }
+    .u-section-1 .u-group-7
+    {
+        margin-top  : 0.625em;
+        margin-left : 3.125em;
+    }
+    .u-section-1 .u-group-8
+    {
+        margin-top  : 0.625em;
+        margin-left : 25em;
+    }
+    .u-section-1 .u-text-1
+    {
+        margin-left : 27.25em;
+    }
+    #userIcon
+    {
+        margin : -14.75em -1.9375em 1em 40em;
+    }
+    .search
+    {
+        margin-top  : 1em;
+        margin-left : 30em;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-group-1
+    {
+        margin-top  : 0.625em;
+        margin-left : 1.25em;
+    }
+
+    .u-section-1 .u-group-2
+    {
+        margin-top  : 0.625em;
+        margin-left : 21.875em;
+    }
+
+    .u-section-1 .u-group-3
+    {
+        margin-top  : 0.625em;
+        margin-left : 1.25em;
+    }
+
+    .u-section-1 .u-group-4
+    {
+        margin-top  : 0.625em;
+        margin-left : 21.875em;
+    }
+
+    .u-section-1 .u-group-5
+    {
+        margin-top  : 0.625em;
+        margin-left : 1.25em;
+    }
+
+    .u-section-1 .u-group-6
+    {
+        margin-top  : 0.625em;
+        margin-left : 21.875em;
+    }
+
+    .u-section-1 .u-text-1
+    {
+        margin-left : 16em;
+    }
+    #userIcon
+    {
+        margin : -12.75em -1.9375em 2.625em 30em;
+    }
+    .search
+    {
+        margin-top  : 1em;
+        margin-left : 30em;
+    }
+}
+
+@media (max-width : 575px)
+{
+    .u-section-1 .u-group-1
+    {
+        margin-top   : 15px;
+        margin-right : 111px;
+        margin-left  : 15vw;
+    }
+
+    .u-section-1 .u-group-2
+    {
+        margin-top   : 1.25em;
+        margin-right : 6.9375em;
+        margin-left  : 15vw;
+    }
+
+    .u-section-1 .u-group-3
+    {
+        margin-top  : 1.25em;
+        margin-left : 15vw;
+    }
+
+    .u-section-1 .u-group-4
+    {
+        margin-top   : 1.25em;
+        margin-right : 6.9375em;
+        margin-left  : 15vw;
+    }
+
+    .u-section-1 .u-group-5
+    {
+        margin-top   : 1.25em;
+        margin-right : 6.9375em;
+        margin-left  : 15vw;
+    }
+
+    .u-section-1 .u-group-6
+    {
+        margin-top  : 1.25em;
+        margin-left : 15vw;
+    }
+    .u-section-1 .u-group-7
+    {
+        margin-top  : 1.25em;
+        margin-left : 15vw;
+    }
+    .u-section-1 .u-group-8
+    {
+        margin-top  : 1.25em;
+        margin-left : 15vw;
+    }
+
+    .u-section-1 .u-text-1
+    {
+        margin-left : 3.5em;
+    }
+    #userIcon
+    {
+        margin : -18.75em -1.9375em 0 29em;
+    }
+    .search-container
+    {
+        margin-left : -12em;
+    }
+}

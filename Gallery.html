@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px;">
+
+  <head>
+      <title>Gallery</title>
+
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+      <meta charset = "utf-8">
+      <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+      <!-- CSS Links -->
+      <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+      <link rel = "stylesheet" href = "Gallery.css" media = "screen">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">$.noConflict();</script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <!-- JS Links -->
+      <script class = "u-script" type = "text/javascript" src = "jquery.js">$.noConflict();</script>
+      <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+      <script type = "text/javascript" src = "NavigationBar.js"></script>
+
+      <!-- Awesome Library Link. -->
+      <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      />
+
+      <style>
+          header
+          {
+              padding-top   : 1rem;
+              border-bottom : #2E2C25 1px solid;
+              background    : none;
+          }
+          .dashes
+          {
+              margin-top  : 2rem;
+              margin-left : 3rem;
+              cursor      : pointer;
+              font-family : 'Baskerville', serif;
+              font-size   : 3rem;
+              color       : #2E2C25;
+          }
+
+          .headerButton
+          {
+              margin-left : 2rem;
+              font-family : 'Baskerville', serif;
+              font-size   : 3rem;
+              font-style  : italic;
+              color       : #2E2C25;
+          }
+          .headerButton:hover, .dashes:hover
+          {
+              color : #72683F;
+          }
+          a
+          {
+              height : 2rem;
+          }
+          .sideBar
+          {
+              position         : fixed;
+              z-index          : 1;
+              top              : 0;
+              left             : 0;
+              overflow-x       : hidden;
+              width            : 0;
+              height           : 100%;
+              transition       : 0.5s;
+              background-color : #645335;
+          }
+          .sideBar li, .sideBar a
+          {
+              display         : block;
+              padding         : 1rem;
+              transition      : 0.3s;
+              font-size       : 2.5rem;
+              font-style      : italic;
+              text-decoration : none;
+              color           : #FFFFFF;
+              text-shadow     : 4px 4px 3px rgb(47 39 25);
+          }
+
+          .sideBar a:hover
+          {
+              transform   : scale(1.07);
+              color       : #CAB187;
+              text-shadow : none;
+          }
+
+          .sideBar .closeButton
+          {
+              position    : absolute;
+              top         : 0;
+              right       : 25px;
+              margin-left : 50px;
+              font-size   : 36px;
+          }
+          .sideBar .logo
+          {
+              display         : flex;
+              justify-content : left;
+              margin-right    : 2rem;
+              margin-left     : 2rem;
+              padding-top     : 5rem;
+              padding-bottom  : 3rem;
+              font-family     : 'Baskerville', serif;
+              font-size       : 4rem;
+              color           : #D7C49A;
+              border-bottom   : 1px solid #FFFFFF;
+              text-shadow     : 4px 4px 3px rgb(47 39 25);
+
+          }
+          .menu a:hover,
+          .employee a:hover,
+          .offer a:hover,
+          .area a:hover,
+          .stock a:hover
+          {
+              transform   : scale(1.07);
+              text-shadow : none;
+          }
+          a[data-toggle='collapse']
+          {
+              position : relative;
+          }
+
+          .dropdown-toggle::after
+          {
+              position  : absolute;
+              top       : 50%;
+              right     : 20px;
+              display   : block;
+              transform : translateY(-50%);
+          }
+          #sidebaar .active
+          {
+              margin-left : -250px;
+          }
+
+          /* Search Bar */
+
+          .search-box
+          {
+              position : fixed;
+              top      : 2%;
+              left     : 60%;
+              width    : fit-content;
+              height   : fit-content;
+
+          }
+          .input-search
+          {
+              width            : 50px;
+              height           : 50px;
+              padding          : 10px;
+              padding-right    : 40px;
+              transition       : all .5s ease-in-out;
+              font-size        : 18px;
+              letter-spacing   : 2px;
+              color            : #D4C7AB;
+              border-style     : none;
+              border-radius    : 25px;
+              outline          : none;
+              background-color : #72683F;
+          }
+          .input-search::placeholder
+          {
+              font-size      : 18px;
+              font-weight    : 100;
+              letter-spacing : 2px;
+              color          : rgba(129, 120, 73, 0.5);
+          }
+          .btn-search
+          {
+              position         : absolute;
+              right            : 0;
+              width            : 50px;
+              height           : 50px;
+              cursor           : pointer;
+              font-size        : 20px;
+              font-weight      : bold;
+              pointer-events   : painted;
+              color            : #D4C7AB;
+              border-style     : none;
+              border-radius    : 50%;
+              outline          : none;
+              background-color : transparent;
+          }
+          .btn-search:focus ~ .input-search
+          {
+              width            : 300px;
+              transition       : all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+              border-bottom    : 1px solid rgba(129, 120, 73, 0.5);
+              border-radius    : 0px;
+              background-color : transparent;
+          }
+          .input-search:focus
+          {
+              width            : 300px;
+              transition       : all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+              border-bottom    : 1px solid rgba(255, 255, 255, .5);
+              border-radius    : 0px;
+              background-color : transparent;
+          }
+      </style>
+
+  </head>
+
+  <body class="u-body">
+
+  <header>
+
+      <div>
+          <h2>
+              <span class = "dashes" onclick = "openNav()">&#9776;</span>
+
+              <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+          </h2>
+
+          <!-- Sidebar. -->
+          <nav id = "sidebaar">
+
+              <div class = "sideBar" id = "sideBar">
+
+                  <a href = "javascript:void(0)" class = "closeButton" onclick = "closeNav()">&times;</a>
+
+                  <div class = "logo">SJ Restaurant</div>
+
+                  <ul>
+                      <li><a style = "height: 3rem;" href = "Home.html">Home</a></li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#menu">
+                              Menu Management</a>
+
+                          <div id = "menuDiv" class = "menu">
+                              <ul id = "menu" class = "collapse list-unstyled">
+                                  <li><a href = "Menu-Sections.html">&rarr;  Show Sections</a></li>
+                                  <li><a href = "Menu-Management.html">&rarr;  Show Menu</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a  style = "height: 3rem;" class = "employeeMan" href = "Employee-Management.html">
+                              Employee Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#customer">
+                              Customer Management</a>
+
+                          <div id = "customerDiv" class = "menu">
+                              <ul id = "customer" class = "collapse list-unstyled">
+                                  <li><a href = "Customer-Management.html">&rarr;  Show Customer Info</a></li>
+                                  <li><a href = "Reservation-Management.html">&rarr;  Show Reservations</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Order-Management.html">
+                              Order Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Offer%20Management.html">
+                              Offer Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "areaMan" href = "Area-Management.html">
+                              Area Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#stock">
+                              Stock Management</a>
+
+                          <div id = "stockDiv" class = "menu">
+                              <ul id = "stock" class = "collapse list-unstyled">
+                                  <li><a href = "Stock-Management.html">&rarr;  Show Stocks</a></li>
+                                  <li><a href = "Supplier-Management.html">&rarr;  Show Suppliers</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <p style = "width:100%; margin-left: -1rem; margin-top: 6rem; border-top: 2px solid white"></p>
+                          <a class = "stockMan" href = "Information-Page.html">
+                              Restaurant Information</a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+          </nav>
+
+          <!-- Searchbar. -->
+          <div class="search-box">
+              <button class="btn-search">
+                  <i class="fas fa-search"></i>
+              </button>
+
+              <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+
+          <!-- User icon. -->
+          <div class = "userIcon">
+
+              <!-- <img src = "images/sadEmployeeIcon.jpg" alt = "User icon" class = "icon"> -->
+
+              <div class = "userList">
+
+
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </header>
+
+      <!-- Start Of Section : Class name  = "u-section-1". -->
+      <div class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_510a">
+          <div class="u-clearfix u-sheet u-sheet-1">
+
+              <!-- Popup Screen For Edit and Add : Class name = "OfferConfirmation". -->
+              <div id ="EditSection" class = "EditSection">
+
+                  <span class = "helper"></span>
+                  <div>
+
+                      <!-- Close Button : Class name = "CloseButton". -->
+                      <div class = "EditSection CloseButton">&times;</div>
+
+                      <div class="u-clearfix u-sheet u-sheet-1">
+
+                          <!-- Edit Form : Class name = "u-form-1". -->
+                          <div id = "EditForm" class="u-form u-form-1">
+
+                              <!-- Info Form : Class name = "u-inner-form". -->
+                              <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical
+                              u-inner-form" id = "form" style="padding: 10px" source="custom" name="form">
+
+                                  <!-- Image input : Class name = "u-input-2". -->
+                                  <img id = "image" src = "images/default-image.jpg" alt = "Add Meal Image"
+                                       class = "u-image u-image-round u-preserve-proportions u-radius-10 AddedImage"
+                                       data-image-width = "150" data-image-height = "101">
+
+                                  <input onchange = "document.getElementById('image').src = window.URL.createObjectURL(this.files[0])"
+                                         type = "file" id = "img" name = "img" accept = "image/*" class = "u-border-2
+                                     u-border-black u-border-no-left u-border-no-right u-border-no-top u-input
+                                     u-input-rectangle u-input-2" >
+
+
+                                  <!-- Save Button : Class name = "u-btn-1". -->
+                                  <div class="u-align-center u-form-group u-form-submit">
+                                      <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round
+                                      u-btn-submit u-button-style u-custom-font u-font-playfair-display
+                                      u-hover-custom-color-8 u-none u-radius-5 u-text-custom-color-8 u-text-hover-white
+                                      saveButton">Save</a>
+
+                                      <input type="submit" value="submit" class="u-form-control-hidden">
+                                  </div>
+
+                                  <!-- Messages after pressing button -->
+                                  <div class="u-form-send-message u-form-send-success"> Thank you! Your image has been added. </div>
+                                  <div class="u-form-send-error u-form-send-message"> Unable to add image. Please fix errors then try again. </div>
+                                  <input type="hidden" value="" name="recaptchaResponse">
+
+                              </form>
+                          </div>
+
+                          <!-- Add Form : Class name = "u-form-2". -->
+                          <div class="u-form u-form-2">
+
+                              <!-- Info Form : Class name = "u-inner-form". -->
+                              <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical
+                              u-inner-form" id = "AddForm" style="padding: 10px" source="custom" name="form">
+
+                                  <!-- Image input : Class name = "u-input-2". -->
+                                  <img id = "AddImage" src = "images/default-image.jpg" alt = "Add Meal Image"
+                                       class = "u-image u-image-round u-preserve-proportions u-radius-10 AddedImage"
+                                       data-image-width = "150" data-image-height = "101">
+
+                                  <input onchange = "document.getElementById('image').src = window.URL.createObjectURL(this.files[0])"
+                                         type = "file" id = "AddImg" name = "img" accept = "image/*" class = "u-border-2
+                                     u-border-black u-border-no-left u-border-no-right u-border-no-top u-input
+                                     u-input-rectangle u-input-2" >
+
+
+                                  <!-- Save Button : Class name = "u-btn-1". -->
+                                  <div class="u-align-center u-form-group u-form-submit">
+                                      <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round
+                                      u-btn-submit u-button-style u-custom-font u-font-playfair-display
+                                      u-hover-custom-color-8 u-none u-radius-5 u-text-custom-color-8 u-text-hover-white
+                                      saveButton">Save</a>
+
+                                      <input type="submit" value="submit" class="u-form-control-hidden">
+                                  </div>
+
+                                  <!-- Messages after pressing button -->
+                                  <div class="u-form-send-message u-form-send-success"> Thank you! Your image has been added. </div>
+                                  <div class="u-form-send-error u-form-send-message"> Unable to add image. Please fix errors then try again. </div>
+                                  <input type="hidden" value="" name="recaptchaResponse">
+
+                              </form>
+                          </div>
+
+                      </div>
+
+                  </div>
+              </div>
+
+              <!-- Popup Screen For Delete : Class name = "deleteConfirm". -->
+              <div id = "deleteConfirm" class = "deleteConfirm">
+
+                  <span class = "helper"></span>
+                  <div>
+
+                      <!-- Close Button : Class name = "CloseButton". -->
+                      <div class = "deleteConfirm DCloseButton">&times;</div>
+
+                      <p class = "ConfirmText"> Are you sure you want to delete this item?</p>
+
+                      <!-- Delete Button : Class name = "deleteButton". -->
+                      <button class = "u-border-1 u-border-custom-color-8 u-btn u-btn-round u-button-style
+                            u-custom-color-8 u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                            u-text-body-alt-color u-text-hover-custom-color-8 deleteButton">Delete
+                      </button>
+
+                  </div>
+              </div>
+
+              <div class = "BelowHeader">
+                  <!-- Gallery Header : Class name = "u-text-1". -->
+                  <h1 class="u-custom-font u-text u-text-custom-color-8 Gallery"
+                      data-animation-name="slideIn" data-animation-duration="2000" data-animation-delay="0"
+                      data-animation-direction="Down">Gallery
+                  </h1>
+
+                  <!-- Add button : Class name = "AddButton. -->
+                  <a onclick="openSaveWindow()" href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round
+                u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none u-radius-5
+                u-text-custom-color-8 u-text-hover-white AddButton">
+                      <i class = "fa fa-plus"></i>
+                      Add Image
+                  </a>
+              </div>
+
+
+              <!-- Add Button on small devices : Class name = "AddButtonSmall". -->
+              <a onclick="openSaveWindow()" href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round
+                u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none u-radius-5
+                u-text-custom-color-8 u-text-hover-white AddButtonSmall">
+                  <i class = "fa fa-plus"></i>
+              </a>
+
+              <!-- Menu Div : Class name = "u-list-1". -->
+              <div class="u-layout-grid u-list u-list-1">
+                  <div class="u-align-center u-repeater u-repeater-1">
+
+                      <!-- Menu item (Meal Box) : Class name = "u-list-item-1". -->
+                      <div class="u-align-center u-container-style u-effect-hover-zoom u-list-item u-radius-50
+                           u-repeater-item u-shading u-shape-round u-list-item-1" data-image-width="2000"
+                           data-image-height="1333" data-animation-name="flipIn" data-animation-duration="1500"
+                           data-animation-delay="0" data-animation-direction="X">
+
+                          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+
+                              <div class="u-background-effect u-expanded">
+
+                                  <!-- Meal Image : Class name = "u-image-1". -->
+                                  <img src = "images/default-image.jpg" class="u-background-effect-image u-expanded
+                                  u-image u-shading u-image-1" data-image-width="800" data-image-height="631">
+
+                              </div>
+
+                              <div class="u-align-left u-container-style u-group u-video-cover u-group-1">
+                                  <div class="u-container-layout u-container-layout-2">
+
+                                      <div class = "Buttons">
+
+                                          <!-- Edit Button : Class name = "u-btn-1". -->
+                                          <a onclick="openEditWindow()" href="#" data-page-id="450608696" class="u-border-1
+                                          u-border-custom-color-8 u-btn u-btn-round u-button-style u-custom-color-8
+                                          u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                          u-text-body-alt-color u-text-hover-custom-color-8 u-btn-1">Edit
+                                          </a>
+
+                                          <!-- Delete Button : Class name = "eraser". -->
+                                          <a class = "eraser" href = "#" >
+                                              <i onclick = "openDeleteConfirmWindow()" class = "fas fa-trash"></i>
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Menu item (Meal Box) : Class name = "u-list-item-1". -->
+                      <div class="u-align-center u-container-style u-effect-hover-zoom u-list-item u-radius-50
+                           u-repeater-item u-shading u-shape-round u-list-item-1" data-image-width="2000"
+                           data-image-height="1333" data-animation-name="flipIn" data-animation-duration="1500"
+                           data-animation-delay="0" data-animation-direction="X">
+
+                          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+
+                              <div class="u-background-effect u-expanded">
+
+                                  <!-- Meal Image : Class name = "u-image-1". -->
+                                  <img src = "images/default-image.jpg" class="u-background-effect-image u-expanded
+                                  u-image u-shading u-image-1" data-image-width="800" data-image-height="631">
+
+                              </div>
+
+                              <div class="u-align-left u-container-style u-group u-video-cover u-group-1">
+                                  <div class="u-container-layout u-container-layout-2">
+
+                                      <div class = "Buttons">
+
+                                          <!-- Edit Button : Class name = "u-btn-1". -->
+                                          <a onclick="openEditWindow()" href="#" data-page-id="450608696" class="u-border-1
+                                          u-border-custom-color-8 u-btn u-btn-round u-button-style u-custom-color-8
+                                          u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                          u-text-body-alt-color u-text-hover-custom-color-8 u-btn-1">Edit
+                                          </a>
+
+                                          <!-- Delete Button : Class name = "eraser". -->
+                                          <a class = "eraser" href = "#" >
+                                              <i onclick = "openDeleteConfirmWindow()" class = "fas fa-trash"></i>
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Menu item (Meal Box) : Class name = "u-list-item-1". -->
+                      <div class="u-align-center u-container-style u-effect-hover-zoom u-list-item u-radius-50
+                           u-repeater-item u-shading u-shape-round u-list-item-1" data-image-width="2000"
+                           data-image-height="1333" data-animation-name="flipIn" data-animation-duration="1500"
+                           data-animation-delay="0" data-animation-direction="X">
+
+                          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+
+                              <div class="u-background-effect u-expanded">
+
+                                  <!-- Meal Image : Class name = "u-image-1". -->
+                                  <img src = "images/default-image.jpg" class="u-background-effect-image u-expanded
+                                  u-image u-shading u-image-1" data-image-width="800" data-image-height="631">
+
+                              </div>
+
+                              <div class="u-align-left u-container-style u-group u-video-cover u-group-1">
+                                  <div class="u-container-layout u-container-layout-2">
+
+                                      <div class = "Buttons">
+
+                                          <!-- Edit Button : Class name = "u-btn-1". -->
+                                          <a onclick="openEditWindow()" href="#" data-page-id="450608696" class="u-border-1
+                                          u-border-custom-color-8 u-btn u-btn-round u-button-style u-custom-color-8
+                                          u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                          u-text-body-alt-color u-text-hover-custom-color-8 u-btn-1">Edit
+                                          </a>
+
+                                          <!-- Delete Button : Class name = "eraser". -->
+                                          <a class = "eraser" href = "#" >
+                                              <i onclick = "openDeleteConfirmWindow()" class = "fas fa-trash"></i>
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Menu item (Meal Box) : Class name = "u-list-item-1". -->
+                      <div class="u-align-center u-container-style u-effect-hover-zoom u-list-item u-radius-50
+                           u-repeater-item u-shading u-shape-round u-list-item-1" data-image-width="2000"
+                           data-image-height="1333" data-animation-name="flipIn" data-animation-duration="1500"
+                           data-animation-delay="0" data-animation-direction="X">
+
+                          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+
+                              <div class="u-background-effect u-expanded">
+
+                                  <!-- Meal Image : Class name = "u-image-1". -->
+                                  <img src = "images/default-image.jpg" class="u-background-effect-image u-expanded
+                                  u-image u-shading u-image-1" data-image-width="800" data-image-height="631">
+
+                              </div>
+
+                              <div class="u-align-left u-container-style u-group u-video-cover u-group-1">
+                                  <div class="u-container-layout u-container-layout-2">
+
+                                      <div class = "Buttons">
+
+                                          <!-- Edit Button : Class name = "u-btn-1". -->
+                                          <a onclick="openEditWindow()" href="#" data-page-id="450608696" class="u-border-1
+                                          u-border-custom-color-8 u-btn u-btn-round u-button-style u-custom-color-8
+                                          u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                          u-text-body-alt-color u-text-hover-custom-color-8 u-btn-1">Edit
+                                          </a>
+
+                                          <!-- Delete Button : Class name = "eraser". -->
+                                          <a class = "eraser" href = "#" >
+                                              <i onclick = "openDeleteConfirmWindow()" class = "fas fa-trash"></i>
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+
+      <script>
+          let editSection = document.getElementById("EditSection");
+          let forms = editSection.getElementsByTagName("div");
+          let deleteConfirm = document.getElementById("deleteConfirm");
+
+          let btn = document.getElementsByClassName("u-btn-1");
+          let deleteButton = document.getElementsByClassName("fa-trash");
+
+          let span = document.getElementsByClassName("CloseButton")[0];
+          let deleteCloseButton = document.getElementsByClassName("DCloseButton")[0];
+
+          function openSaveWindow()
+          {
+              for(let i = 0; i < btn.length; i++)
+              {
+                  editSection.style.display = "block";
+                  forms[7].style.display = "none";
+                  forms[3].style.display = "block";
+              }
+          }
+
+          function openEditWindow()
+          {
+              console.log(forms);
+              for(let i = 0; i < btn.length; i++)
+              {
+                  editSection.style.display = "block";
+                  forms[3].style.display = "none";
+                  forms[7].style.display = "block";
+              }
+          }
+
+          function openDeleteConfirmWindow()
+          {
+              for(let i = 0; i < deleteButton.length; i++)
+              {
+                  deleteConfirm.style.display = "block";
+              }
+          }
+
+          span.onclick = function()
+          {
+              editSection.style.display = "none";
+          }
+
+          deleteCloseButton.onclick = function()
+          {
+              deleteConfirm.style.display = "none";
+          }
+
+          window.onclick = function(event)
+          {
+              if (event.target === editSection)
+              {
+                  editSection.style.display = "none";
+              }
+              else if (event.target === deleteConfirm)
+              {
+                  deleteConfirm.style.display = "none";
+              }
+          }
+
+      </script>
+
+  </body>
+</html>

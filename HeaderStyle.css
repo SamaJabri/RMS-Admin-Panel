@@ -1,0 +1,113 @@
+/* Header */
+
+#userIcon
+{
+    animation-name: slideInDown;
+    animation-duration: 2000ms;
+    width:  3.8125em;
+    height:  3.8125em;
+    box-shadow: 0px 0 13px 3px rgba(100,83,53,0.5);
+    margin: -2.75em -1.9375em 2.625em 80em;
+    will-change: transform;
+    cursor: pointer;
+
+}
+
+#userIcon:hover
+{
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+.xxx
+{
+    background-color: rgba(197, 169, 120, 0.8);
+    color: #2E2C25;
+    display: none;
+    position: fixed;
+    min-width: 10em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    border-radius: 10px;
+    z-index: 1;
+    top: 9rem;
+    right: 12.5rem;
+}
+
+.xxx::after
+{
+    content: "";
+    position: absolute;
+    bottom: 95%;
+    left: 63%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(197, 169, 120) transparent
+    transparent transparent;
+}
+
+#userIcon:hover .xxx {
+    display: block;
+}
+
+.xxx li{
+    color: #2E2C25;
+    padding: 0.75em  1em;
+    text-decoration: none;
+    display: block;
+}
+
+.xxx li:hover {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .xxx {
+    display: block;
+}
+
+.dropdown:hover #userIcon {
+    background-color: #3e8e41;
+}
+
+.header .search-container
+{
+    float: right;
+}
+
+.search
+{
+    margin-top: -4.125em;
+    margin-left: 60em;
+}
+
+.header input[type=text] {
+    padding: 0.375em;
+    margin-top: 0.5em;
+    font-size: 1.0625em;
+    border: none;
+}
+
+.header .search-container button {
+    float: right;
+    padding: 0.375em 0.625em;
+    margin-top: 0.5em;
+    margin-right: 0;
+    background: #ddd;
+    font-size: 1.0625em;
+    border: none;
+    cursor: pointer;
+}
+
+.header .search-container button:hover {
+    background: #ccc;
+}

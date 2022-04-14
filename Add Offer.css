@@ -1,0 +1,182 @@
+body
+{
+    font-family         : 'Playfair Display', serif;
+    background-image    : url('images/beige2.jpg');
+    background-repeat   : repeat;
+    background-position : center;
+    background-size     : 100vw 100vh;
+}
+
+/* Confirmation Popup Screen */
+
+.AddOffer
+{
+    position   : fixed;
+    z-index    : 10000;
+    top        : 0;
+    left       : 0;
+    display    : none;
+    overflow   : auto;
+    width      : 100%;
+    height     : 100%;
+    cursor     : pointer;
+    text-align : center;
+    background : rgba(100, 83, 53, 0.5);
+}
+
+.AddOffer .helper
+{
+    display        : inline-block;
+    height         : 100%;
+    vertical-align : middle;
+}
+
+.AddOffer > div
+{
+    position         : relative;
+    display          : inline-block;
+    width            : 60%;
+    height           : auto;
+    min-height       : 100px;
+    max-height       : 551px;
+    padding          : 15px 5%;
+    vertical-align   : middle;
+    border-radius    : 20px;
+    background-color : #D9C79E;
+    box-shadow       : 10px 10px 60px rgb(100, 83, 53);
+}
+
+.AddOffer .CloseButton
+{
+    position         : absolute;
+    top              : -20px;
+    right            : -20px;
+    left             : -10px;
+    display          : inline-block;
+    width            : 30px;
+    height           : 30px;
+    cursor           : pointer;
+    font-family      : Arial, serif;
+    font-size        : 25px;
+    font-weight      : bold;
+    font-style       : italic;
+    line-height      : 30px;
+    text-align       : center;
+    color            : #2E2C25;
+    border-radius    : 50px;
+    background-color : #D9C79E;
+
+    box-shadow       : 4px 4px 14px 0 rgb(100, 83, 53);
+}
+
+.CloseButton:hover
+{
+    background-color : rgb(100, 83, 53);
+}
+
+.trigger
+{
+    margin      : 20px;
+    cursor      : pointer;
+    font-size   : 20px;
+    font-weight : bold;
+}
+
+.AddOffer .u-form-1
+{
+    width     : 75rem;
+    height    : 265px;
+    margin    : 4rem 0rem;
+    font-size : 1.8rem;
+}
+
+.AddOffer .u-input-1
+{
+    margin-top     : -1rem;
+    margin-bottom  : 1rem;
+    padding-bottom : 1.2rem;
+    text-transform : uppercase;
+
+}
+
+.AddOffer .u-input-2
+{
+    margin-top     : -1rem;
+    margin-bottom  : 1rem;
+    padding-bottom : 1.2rem;
+    text-transform : uppercase;
+}
+
+.AddOffer .u-form-group-3
+{
+    margin-left : 0;
+
+}
+
+.AddOffer .u-input-3
+{
+    margin-top     : -1rem;
+    margin-bottom  : 1rem;
+    padding-bottom : 1.2rem;
+    text-transform : uppercase;
+}
+
+.AddOffer .u-form-group-4
+{
+    margin-left : 0;
+}
+
+.AddOffer .u-input-4
+{
+    margin-top     : -1rem;
+    margin-bottom  : 1rem;
+    padding-bottom : 1.2rem;
+    text-transform : uppercase;
+}
+
+.AddOffer .AddButton
+{
+    height         : 4rem;
+    margin-top     : 2rem;
+    font-size      : 1em;
+    font-weight    : 700;
+    letter-spacing : normal;
+    text-transform : none;
+    border-style   : solid;
+    box-shadow     : 4px 4px 14px 0 rgba(47, 39, 25, 1);
+}
+
+@media (max-width : 1199px)
+{
+    .u-section-1 .u-btn-1
+    {
+        letter-spacing : normal;
+        text-transform : none;
+    }
+}
+
+@media (max-width : 767px)
+{
+    .u-section-1 .u-text-1
+    {
+        width : 540px;
+    }
+
+    .u-section-1 .u-form-1
+    {
+        width : 540px;
+    }
+}
+
+@media (max-width : 575px)
+{
+    .u-section-1 .u-text-1
+    {
+        width : 340px;
+    }
+
+    .u-section-1 .u-form-1
+    {
+        width : 340px;
+    }
+}

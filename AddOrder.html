@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+  <head>
+      <title>Add Order</title>
+
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+      <meta charset = "utf-8">
+      <meta name = "keywords" content = "SJ Restaurant, Manager Login Form​">
+
+      <!-- CSS Links -->
+      <link rel = "stylesheet" href = "nicepage.css" media = "screen">
+      <link rel = "stylesheet" href = "Choose%20Meal.css" media = "screen">
+      <link rel = "stylesheet" href = "HeaderStyling.css" media = "screen"/>
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <!-- JS Links -->
+      <script class = "u-script" type = "text/javascript" src = "jquery.js"></script>
+      <script class = "u-script" type = "text/javascript" src = "nicepage.js"></script>
+      <script class = "u-script" type = "text/javascript" src = "NavigationBar.js"></script>
+
+
+      <!-- Chosen Library. -->
+      <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+      <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
+      <!-- Awesome Library Link. -->
+      <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      />
+
+  </head>
+
+  <body onload="calculateTotal()" class="u-body">
+
+  <header>
+
+      <div>
+          <h2>
+              <span class = "dashes" onclick = "openNav()">&#9776;</span>
+
+              <a class = "headerButton" href = "Home.html">SJ Restaurant</a>
+          </h2>
+
+          <!-- Sidebar. -->
+          <nav id = "sidebaar">
+
+              <div class = "sideBar" id = "sideBar">
+
+                  <a href = "javascript:void(0)" class = "closeButton" onclick = "closeNav()">&times;</a>
+
+                  <div class = "logo">SJ Restaurant</div>
+
+                  <ul>
+                      <li><a style = "height: 3rem;" href = "Home.html">Home</a></li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#menu">
+                              Menu Management</a>
+
+                          <div id = "menuDiv" class = "menu">
+                              <ul id = "menu" class = "collapse list-unstyled">
+                                  <li><a href = "Menu-Sections.html">&rarr;  Show Sections</a></li>
+                                  <li><a href = "Menu-Management.html">&rarr;  Show Menu</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a  style = "height: 3rem;" class = "employeeMan" href = "Employee-Management.html">
+                              Employee Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#customer">
+                              Customer Management</a>
+
+                          <div id = "customerDiv" class = "menu">
+                              <ul id = "customer" class = "collapse list-unstyled">
+                                  <li><a href = "Customer-Management.html">&rarr;  Show Customer Info</a></li>
+                                  <li><a href = "Reservation-Management.html">&rarr;  Show Reservations</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Order-Management.html">
+                              Order Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "offerMan" href = "Offer%20Management.html">
+                              Offer Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" class = "areaMan" href = "Area-Management.html">
+                              Area Management</a>
+                      </li>
+
+                      <li>
+                          <a style = "height: 3rem;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href = "#stock">
+                              Stock Management</a>
+
+                          <div id = "stockDiv" class = "menu">
+                              <ul id = "stock" class = "collapse list-unstyled">
+                                  <li><a href = "Stock-Management.html">&rarr;  Show Stocks</a></li>
+                                  <li><a href = "Supplier-Management.html">&rarr;  Show Suppliers</a></li>
+                              </ul>
+                          </div>
+                      </li>
+
+                      <li>
+                          <p style = "width:100%; margin-left: -1rem; margin-top: 6rem; border-top: 2px solid white"></p>
+                          <a class = "stockMan" href = "Information-Page.html">
+                              Restaurant Information</a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+          </nav>
+
+          <!-- Searchbar. -->
+          <div class="search-box">
+              <button class="btn-search">
+                  <i class="fas fa-search"></i>
+              </button>
+
+              <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+
+          <!-- User icon. -->
+          <div class = "userIcon">
+
+              <!-- <img src = "images/sadEmployeeIcon.jpg" alt = "User icon" class = "icon"> -->
+
+              <div class = "userList">
+
+
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </header>
+
+      <!-- Start Of Section : Class name  = "u-section-1". -->
+      <div class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_510a">
+
+          <div class="u-clearfix u-sheet u-sheet-1">
+
+              <!-- Popup Screen For Add : Class name = "AddMeal". -->
+              <div id ="AddMeal" class = "AddMeal">
+
+                  <span class = "helper"></span>
+                  <div>
+
+                      <!-- Close Button : Class name = "CloseButton". -->
+                      <div onclick = "closeConfirmWindow()" class = "AddMeal CloseButton">&times;</div>
+
+                      <h1 class = "formHeader">Meal Info</h1>
+
+                      <!-- Add Meal to Order : Class name = "u-inner-form". -->
+                      <div class="u-form u-form-1">
+
+                          <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form"
+                                style="padding: 10px" source="custom" name="form">
+
+                              <div class="u-form-group u-form-name">
+
+                                  <!-- Meal name input. -->
+                                  <p class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Meal Name :
+                                  </p>
+
+                                  <!-- Price input. -->
+                                  <p class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Price :
+                                  </p>
+
+
+                                  <!-- Select Ingredients Div: Class Name = "filterDiv" . -->
+                                  <div class = "filterDiv">
+                                      <label for = "editSelect" class = "u-custom-font u-font-playfair-display u-label
+                                       u-text-custom-color-8">Ingredients :</label>
+
+                                      <!-- Select Ingredients : id name = "editSelect" . -->
+                                      <select id = "editSelect" data-placeholder = "Choose ingredients.." multiple
+                                              class = "chosen-select" name = "Filter Type">
+
+                                          <option value = "Type">Tomato</option>
+
+                                      </select>
+                                  </div>
+
+                                  <!-- Quantity Input. -->
+                                  <label for="editSelect" class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Quantity :</label>
+
+                                  <div class = "counter">
+
+                                      <button type="button" class="counter-minus">-</button>
+                                      <h1 class="counter-display">(..)</h1>
+                                      <input hidden id = "counter-input">
+                                      <button type="button" class="counter-plus">+</button>
+
+                                  </div>
+
+
+                                  <!-- Notes input. -->
+                                  <p  class="u-custom-font u-font-playfair-display u-label
+                                    u-text-custom-color-8">Notes :
+                                  </p>
+
+                              </div>
+
+                              <!-- Add Button : Class name = "SaveMealButton". -->
+                              <div class="u-align-center u-form-group u-form-submit">
+
+                                  <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round u-btn-submit
+                                    u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none
+                                    u-radius-5 u-text-custom-color-8 u-text-hover-white SaveMealButton">Add
+                                  </a>
+
+                                  <input type="submit" value="submit" class="u-form-control-hidden">
+
+                              </div>
+
+                              <!-- Messages after pressing button -->
+                              <div class="u-form-send-message u-form-send-success">
+                                  Thank you! Your Meal has been Added. </div>
+                              <div class="u-form-send-error u-form-send-message">
+                                  Unable to add Meal. Please fix errors then try again. </div>
+                              <input type="hidden" value="" name="recaptchaResponse">
+
+                          </form>
+
+                      </div>
+
+                  </div>
+              </div>
+
+              <!-- Popup Screen For Show Order: Class name = "ShowOrder". -->
+              <div id ="ShowOrder" class = "ShowOrder">
+
+                  <span class = "helper"></span>
+                  <div>
+
+                      <!-- Close Button : Class name = "OCloseButton". -->
+                      <div class = "ShowOrder OCloseButton">&times;</div>
+
+                      <table width = "100%" class = "infoTable">
+
+                          <!-- Table Head : Class name = "tableHead". -->
+                          <thead class = "tableHead">
+
+                          <tr>
+                              <th width = "7.5%" style = "padding-right: 23px;">Number</th>
+                              <th width = "15.5%">Meal Image</th>
+                              <th width = "10.5%">Name</th>
+                              <th width = "25%" style = "padding-left: 50px;">Description</th>
+                              <th width = "10.5%" style = "padding-left: 10px;">Quantity</th>
+                              <th width = "10.5%" style = "padding-left: 30px;">Price</th>
+                              <th width = "10.5%" style = "padding-left: 30px;">Options</th>
+                          </tr>
+
+                          </thead>
+
+                          <!-- Table Body. -->
+                          <tbody>
+
+                            <tr>
+                              <!-- Order ID. -->
+                              <td width = "7.5%">
+                                01
+                              </td>
+
+                              <!-- Meal Image. -->
+                              <td width = "15.5%">
+                                  <img src = "images/default-image.jpg" alt = "Meal Image" class = "mealImage">
+                                  <img src = "#" alt = "Meal Image" class = "bigMealImage">
+                              </td>
+
+                              <!-- Meal Name. -->
+                              <td  style = "padding-left: 10px;">
+                                  Pizza
+                              </td>
+
+                              <!-- Meal Description. -->
+                              <td width = "30%" style="word-wrap: break-word; ">
+                                  Extra Cheese, Sauce, No mushrooms.
+                              </td>
+
+                              <!-- Meal Quantity. -->
+                              <td style = "padding-left: 20px;">
+                                4
+                              </td>
+
+                              <!-- Total Price. -->
+                              <td name = "price" style = "padding-left: 35px; ">
+                                  20.98
+
+                              </td>
+
+                              <td>
+                                  <!-- Delete Button : Class name = "fa-trash". -->
+                                  <a class = "eraser" href = "#">
+
+                                      <i onclick = "openDeleteConfirmWindow()" class = "fas fa-trash"></i>
+                                      <p class = "delete">Delete</p>
+
+                                  </a>
+
+                                  <!-- Edit Button : Class name = "fa-edit". -->
+                                  <a class = "edit" href = "#">
+
+                                      <i onclick = "openInfoWindow()" class = "far fa-edit"></i>
+                                      <p class = "update">Edit</p>
+
+                                  </a>
+                              </td>
+                          </tr>
+
+                          </tbody>
+
+                      </table>
+
+                      <!-- Confirm Button : Class name = "ConfirmOrderButton". -->
+                      <div class="u-align-center u-form-group u-form-submit">
+
+                          <a href="#" class="u-border-2 u-border-custom-color-8 u-btn u-btn-round u-btn-submit
+                               u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8 u-none
+                               u-radius-5 u-text-custom-color-8 u-text-hover-white ConfirmOrderButton">Confirm Order
+                          </a>
+
+                          <input type="submit" value="submit" class="u-form-control-hidden">
+
+                      </div>
+
+                      <!-- Show total div : Class name = "totalDiv". -->
+                      <div class = "totalDiv">
+
+                          <!-- Show Total : Class name = "AddSectionName". -->
+                          <label class="u-custom-font u-font-playfair-display u-label u-text-custom-color-8">
+                              Total : </label>
+
+                          <input type="text" name="name" class="u-border-2 u-border-custom-color-8
+                           u-border-no-left u-border-no-right u-border-no-top u-custom-font
+                           u-font-playfair-display u-input u-input-rectangle u-text-custom-color-8 ShowTotal"
+                           id = "total">
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+              <!-- Menu Header : Class name = "u-text-1". -->
+              <h1 class="u-custom-font u-text u-text-custom-color-8 u-text-1"
+                  data-animation-name="slideIn" data-animation-duration="2000" data-animation-delay="0"
+                  data-animation-direction="Down">Menu
+              </h1>
+
+              <!-- Show Order button : Class name = "showOrderButton". -->
+              <a onclick = "showOrderWindow()" href = "#" data-page-id="884108653" class="u-border-2 u-border-custom-color-8
+                u-btn u-btn-round u-button-style u-custom-font u-font-playfair-display u-hover-custom-color-8
+                u-none u-radius-5 u-text-custom-color-8 u-text-hover-white showOrderButton">
+
+                  <i class = "fa fa-plus"></i>
+                  Show Order
+
+              </a>
+
+              <!-- Menu Div : Class name = "u-list-1". -->
+              <div class="u-layout-grid u-list u-list-1">
+
+                  <div class="u-align-center u-repeater u-repeater-1">
+
+                      <!-- Menu item (Meal Box) : Class name = "u-list-item-1". -->
+                      <div class="u-align-center u-container-style u-effect-hover-zoom u-list-item u-radius-50
+                           u-repeater-item u-shading u-shape-round u-list-item-1" data-image-width="2000"
+                           data-image-height="1333" data-animation-name="flipIn" data-animation-duration="1500"
+                           data-animation-delay="0" data-animation-direction="X">
+
+                          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+
+                              <div class="u-background-effect u-expanded">
+
+                                  <!-- Meal Image : Class name = "u-image-1". -->
+                                  <img src = "images/default-image.jpg" class="u-background-effect-image u-expanded
+                                  u-image u-shading u-image-1" data-image-width="800" data-image-height="631"
+                                  alt = "Meal Image">
+
+                              </div>
+
+                              <div class="u-align-left u-container-style u-group u-video-cover u-group-1">
+                                  <div class="u-container-layout u-container-layout-2">
+
+                                      <!-- Meal Name : Class name = "u-text-2". -->
+                                      <h3 class="u-align-left u-custom-font u-font-playfair-display u-text
+                                      u-text-white u-text-2">Original
+                                      </h3>
+
+                                      <!-- Meal Info : Class name = "u-text-3". -->
+                                      <p class="u-text u-text-white u-text-3">Tomato sauce, mozzarella &amp; oregano</p>
+
+                                      <!-- Meal Price : Class name = "u-text-4". -->
+                                      <h6 class="u-text u-text-palette-3-light-2 u-text-4">$18.00</h6>
+
+                                      <!-- Num of times ordered : Class name = "u-text-5". -->
+                                      <h6 class = "u-text u-text-white u-text-5" style = "margin-bottom: 0;">Ordered : </h6>
+
+                                      <div class = "Buttons">
+
+                                          <!-- Add Button : Class name = "u-btn-2". -->
+                                          <a onclick="openConfirmWindow()" href="#" data-page-id="450608696" class="u-border-1
+                                          u-border-custom-color-8 u-btn u-btn-round u-button-style u-custom-color-8
+                                          u-custom-font u-font-playfair-display u-hover-custom-color-7 u-radius-6
+                                          u-text-body-alt-color u-text-hover-custom-color-8 u-btn-2">Add
+                                          </a>
+
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+
+      <script>
+
+          /* Select in add form js */
+
+          $('.chosen-select').chosen({
+              no_results_text: 'Oops, nothing found!'
+          });
+
+          $('.chosen-container').css(
+              {
+                  'width': '45rem',
+                  'background-color': 'beige',
+                  'margin-top': '8px',
+                  'margin-bottom': '8px',
+                  'font-family': 'Playfair Display'
+              });
+
+          /* Popup Screens JS */
+
+          let showOrder = document.getElementById("ShowOrder");
+          let confirmationBox = document.getElementById("AddMeal");
+
+          let btn = document.getElementsByClassName("u-btn-2");
+
+          let closeOrderButton = document.getElementsByClassName("OCloseButton")[0];
+          let span = document.getElementsByClassName("CloseButton");
+
+          function openConfirmWindow()
+          {
+              for(let i = 0; i < btn.length; i++)
+              {
+                  confirmationBox.style.display = "block";
+              }
+          }
+
+          function closeConfirmWindow()
+          {
+              for(let i = 0; i < span.length; i++)
+              {
+                  confirmationBox.style.display = "none";
+              }
+          }
+
+          function showOrderWindow()
+          {
+              showOrder.style.display = "block";
+          }
+
+          closeOrderButton.onclick = function()
+          {
+              showOrder.style.display = "none";
+          }
+
+          window.onclick = function(event)
+          {
+              if (event.target === confirmationBox)
+              {
+                  confirmationBox.style.display = "none";
+              }
+              else if (event.target === showOrder)
+              {
+                  showOrder.style.display = "none";
+              }
+          }
+
+
+          /* Calculate total price in order. */
+          function calculateTotal()
+          {
+              let price = document.getElementsByName('price');
+              let total = 0;
+
+              for(let i=0;i<price.length;i++)
+              {
+                  if(parseFloat(price[i].innerText))
+                      total += parseFloat(price[i].innerText);
+              }
+
+              document.getElementById('total').value = total;
+              total.toFixed(2);
+          }
+
+          /* JS For counter (Meal Quantity) */
+
+          let counterDisplayElem = document.querySelector('.counter-display');
+          let counterMinusElem = document.querySelector('.counter-minus');
+          let counterPlusElem = document.querySelector('.counter-plus');
+
+          let counterInput = document.getElementById('counter-input');
+
+          let count = 0;
+
+          updateDisplay();
+
+          counterPlusElem.addEventListener("click",()=>{
+              count++;
+              updateDisplay();
+          }) ;
+
+          counterMinusElem.addEventListener("click",()=>{
+              if(count === 0)
+              {
+                  updateDisplay();
+              }
+              else
+              {
+                  count--;
+                  updateDisplay();
+              }
+
+          });
+
+          function updateDisplay(){
+              counterDisplayElem.innerHTML = count;
+              counterInput.value = count;
+          };
+
+
+      </script>
+
+  </body>
+
+</html>
